@@ -5,6 +5,7 @@
     </div>
     <div class="description">
       <h2>{{ work.name }}</h2>
+      <h3 class="purpose">{{ work.purpose }}</h3>
       <h3>{{ work.language }}</h3>
       <button @click="open">LEARN MORE</button>
     </div>
@@ -149,10 +150,17 @@ export default {
     font-size: 1.2rem;
   }
 
+  .purpose {
+    width:80%;
+    font-size: 0.8rem;
+    color: black;
+  }
+
   h3 {
     width: 50%;
     font-size: 0.8rem;
     margin: 0;
+    color: #99582aff;
   }
 
   button {
@@ -180,7 +188,7 @@ export default {
 
 .slider {
   width: 100%;
-  height: 45vh;
+  height: 60vh;
 }
 
 .fade-enter-active,
@@ -202,13 +210,13 @@ export default {
 
 img {
   width: 100%;
-  height: 45vh;
+  height: 60vh;
   object-fit: cover;
 }
 
 .content {
   width: 100%;
-  min-height: 55vh;
+  min-height: 40vh;
   display: grid;
   justify-items: center;
   align-items: start;
@@ -255,8 +263,8 @@ img {
     align-items: center;
     margin-right: 1em;
     position: absolute;
-    bottom: 1vh;
-    right: 0;
+    top: 1vh;
+    left: -1vw;
 
     img {
       width: 15px;
