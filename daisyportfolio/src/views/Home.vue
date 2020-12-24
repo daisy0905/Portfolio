@@ -9,13 +9,25 @@
 </template>
 
 <script>
+import cookies from "vue-cookies"
 export default {
   methods: {
     goToProjects: function() {
+      cookies.set("currentPage", 2)
+      this.$store.commit("changePage", 2)
+      console.log(this.isActive)
       this.$router.push("/projects")
     },
     goToAbout: function() {
+      cookies.set("currentPage", 1)
+      this.$store.commit("changePage", 1)
+      console.log(this.isActive)
       this.$router.push("/about")
+    }
+  },
+  computed: {
+    isActive() {
+      return this.$store.getters.pageGet;
     }
   },
 };

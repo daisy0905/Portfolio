@@ -19,17 +19,18 @@
       </div>
     </div>
     <div v-if="display == false" id="nav-bar">
-        <div></div>
-        <h2 @click="goToHome">HOME</h2>
-        <h2 @click="goToAbout">ABOUT</h2>
-        <h2 @click="goToProjects">PROJECTS</h2>
-        <h2 @click="goToContact">CONTACT</h2>
-        <div></div>
+      <div></div>
+      <h2 @click="goToHome" :class="{ isActive: active }">HOME</h2>
+      <h2 @click="goToAbout" :class="{ isActive: 1 }">ABOUT</h2>
+      <h2 @click="goToProjects" :class="{ isActive: 2 }">PROJECTS</h2>
+      <h2 @click="goToContact" :class="{ isActive: 3 }">CONTACT</h2>
+      <div></div>
     </div>
   </div>
 </template>
 
 <script>
+import cookies from "vue-cookies"
 export default {
   data() {
     return {
@@ -43,32 +44,49 @@ export default {
     hideNavBar: function () {
       this.display = true;
     },
-    goToHome: function() {
-        this.$router.push("/")
+    goToHome: function () {
+      cookies.set("currentPage", 0)
+      this.$store.commit("changePage", 0)
+      console.log(this.active)
+      this.$router.push("/");
     },
-    goToAbout: function() {
-        this.$router.push("/about")
+    goToAbout: function () {
+      cookies.set("currentPage", 1)
+      this.$store.commit("changePage", 1)
+      console.log(this.active)
+      this.$router.push("/about");
     },
-    goToProjects: function() {
-        this.$router.push("/projects")
+    goToProjects: function () {
+      cookies.set("currentPage", 2)
+      this.$store.commit("changePage", 2)
+      console.log(this.active)
+      this.$router.push("/projects");
     },
-    goToContact: function() {
-        this.$router.push("/contact")
+    goToContact: function () {
+      cookies.set("currentPage", 3)
+      this.$store.commit("changePage", 3)
+      console.log(this.active)
+      this.$router.push("/contact");
     },
+  },
+  computed: {
+    active() {
+      return this.$store.getters.pageGet;
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
 #nav {
-    height: 8vh;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    padding: 10px 0 0 0;
-    margin-bottom: 1em; 
-    z-index: 100;
-    margin-bottom: 0.5em;
+  height: 8vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  padding: 10px 0 0 0;
+  margin-bottom: 1em;
+  z-index: 100;
+  margin-bottom: 0.5em;
 }
 
 #header {
@@ -78,14 +96,14 @@ export default {
   grid-template-columns: 10% 70% 20%;
   justify-items: center;
   align-items: center;
-  border-bottom: 1px solid darkgrey; 
+  border-bottom: 1px solid darkgrey;
 
   .icon {
     height: 100%;
     width: 100%;
     display: grid;
     justify-items: center;
-    align-items: center; 
+    align-items: center;
 
     img {
       height: 25px;
@@ -94,7 +112,7 @@ export default {
   }
 
   h3 {
-    font-weight: bold; 
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     letter-spacing: 5px;
@@ -114,11 +132,15 @@ export default {
   z-index: 100;
 
   h2 {
-    font-weight: bold; 
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     margin-left: 2em;
     color: white;
+  }
+
+  .isActive {
+    color: red;
   }
 }
 </style>

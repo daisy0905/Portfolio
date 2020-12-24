@@ -1,11 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import cookies from "vue-cookies"
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    activaPage: 0
+    activaPage: cookies.get("currentPage")
   },
   mutations: {
     changePage: function(state, data) {
@@ -13,5 +14,9 @@ export default new Vuex.Store({
     },
   },
   actions: {},
-  modules: {}
+  getters: {
+    pageGet: function(state) {
+      return state.activePage;
+    }
+  }
 });

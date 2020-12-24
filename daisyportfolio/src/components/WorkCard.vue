@@ -23,8 +23,9 @@
         <h3>ABOUT</h3>
         <p>{{ work.description }}</p>
         <div class="button">
-          <button>VIEW SITE</button>
-          <button>GITHUB CODE</button>
+          <button @click="redirect(url)">VIEW SITE</button>
+          <button v-if="github_front != ''" @click="redirect(github_front)">GITHUB FRONT-END</button>
+          <button v-if="github_back != ''" @click="redirect(github_back)">GITHUB BACK-END</button>
         </div>
         <div @click="open" class="close icon">
           <img src="../assets/close-icon.png" alt="close icon" />
@@ -50,6 +51,9 @@ export default {
       currentIndex: 0,
       display: false,
       currentImag: "",
+      url: this.work.website,
+      github_front: this.work.github_front,
+      github_back: this.work.github_back
     };
   },
   mounted: function () {
@@ -72,6 +76,9 @@ export default {
       this.currentImage = this.images[
         Math.abs(this.currentIndex++) % this.images.length
       ].image;
+    },
+    redirect: function (link, target = "_blank") {
+      window.open(link, target);
     },
   },
   computed: {
@@ -151,7 +158,7 @@ export default {
   }
 
   .purpose {
-    width:80%;
+    width: 80%;
     font-size: 0.8rem;
     color: black;
   }
@@ -244,14 +251,15 @@ img {
     display: grid;
     justify-items: center;
     align-items: start;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     button {
-      width: 70%;
+      width: 90%;
       padding: 0.5em;
       color: black;
       border: 2px solid red;
       font-weight: bold;
+      font-size: 0.6rem;
     }
   }
 
