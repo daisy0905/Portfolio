@@ -50,21 +50,25 @@
         
       </div>
       <div id="skills">
+        <h2>SOFTWARE SKILLS & WEB TECHNOLOGY</h2>
         <img
-          src="../assets/skillset-diagram.jpg"
+          src="../assets/Skill_diagram.png"
           alt="The diagram shows skillsets"
         />
       </div>
     </div>
+    <footer-bar></footer-bar>
   </div>
 </template>
 
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
+import FooterBar from "../components/Footer.vue"
 // import axios from "axios"
 export default {
   components: {
     NavigationBar,
+    FooterBar
   },
   // data() {
   //   return {
@@ -194,6 +198,7 @@ h1 {
 
       img {
         width: 200px;
+        box-shadow: 3px 3px 3px grey;
       }
     }
 
@@ -219,11 +224,23 @@ h1 {
 
 #skills {
   width: 80%;
-  height: 40vh;
+  min-height: 40vh;
   display: grid;
   justify-items: center;
   align-items: start;
   margin-top: 1em;
+
+  h2 {
+      width: 90%;
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      font-size: 0.8rem;
+      color: #6f1d1bff;
+      font-weight: bold;
+      border-bottom: 1px solid #6f1d1bff;
+      margin-bottom: 1em;
+    }
 
   img {
     width: 100%;

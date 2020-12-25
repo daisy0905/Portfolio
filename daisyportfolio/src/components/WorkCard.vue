@@ -23,7 +23,7 @@
         <h3>ABOUT</h3>
         <p>{{ work.description }}</p>
         <div class="button">
-          <button @click="redirect(url)">VIEW SITE</button>
+          <button v-if="url != ''" @click="redirect(url)">VIEW SITE</button>
           <button v-if="github_front != ''" @click="redirect(github_front)">GITHUB FRONT-END</button>
           <button v-if="github_back != ''" @click="redirect(github_back)">GITHUB BACK-END</button>
         </div>
@@ -164,7 +164,7 @@ export default {
   }
 
   h3 {
-    width: 50%;
+    width: 60%;
     font-size: 0.8rem;
     margin: 0;
     color: #99582aff;
