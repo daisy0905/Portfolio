@@ -28,27 +28,37 @@
           <h2>VISUAL APPEALING</h2>
           <p>Great design sensibility for user-interface heuristics.</p>
         </div>
+        <div class="concept-unit">
+          <img
+            src="../assets/Dynamic.png"
+            alt="the image shows dynamic concept"
+          />
+          <h2>DYNAMIC</h2>
+          <p>I love making pages come to life.</p>
+        </div>
       </div>
       <div id="profile">
         <div id="bio">
           <div id="portrait">
             <img src="../assets/portrait.jpg" alt="portrait" />
           </div>
+        </div>
+        <div id="details">
           <h3>
             Coming from a design background it has taken the past 6 years of my
             career to figure out where I belong in the crazy world we work in.
           </h3>
+          <p>
+            I have a real passion for development and using my design
+            experience. I leverage my knowledge of typographic, relationships
+            and design patterns to create aesthetically pleasing but also very
+            viable digital experiences. I find it incredibly rewarding to write
+            not only very clean code but to witness and be apart of the solution
+            bringing a design into development.
+          </p>
         </div>
-        <p>
-          I have a real passion for development and using my design experience.
-          I leverage my knowledge of typographic, relationships and design
-          patterns to create aesthetically pleasing but also very viable digital
-          experiences. I find it incredibly rewarding to write not only very
-          clean code but to witness and be apart of the solution bringing a
-          design into development.
-        </p>
-        
       </div>
+      <button>DOWNLOAD RESUME</button>
       <div id="skills">
         <h2>SOFTWARE SKILLS & WEB TECHNOLOGY</h2>
         <img
@@ -63,43 +73,12 @@
 
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
-import FooterBar from "../components/Footer.vue"
-// import axios from "axios"
+import FooterBar from "../components/Footer.vue";
 export default {
   components: {
     NavigationBar,
-    FooterBar
+    FooterBar,
   },
-  // data() {
-  //   return {
-  //     filesrc: [{
-  //       title: 'DaisyResume.pdf',
-  //       src: require("@/assets/Resume_Daisy_Tong.pdf")
-  //     }]
-  //   }
-  // },
-  // methods: {
-  //   forceFileDownload(response, title) {
-  //     console.log(title)
-  //     const url = window.URL.createObjectURL(new Blob([response.data]))
-  //     const link = document.createElement('a')
-  //     link.href = url
-  //     link.setAttribute('download', title)
-  //     document.body.appendChild(link)
-  //     link.click()
-  //   },
-  //   downloadWithAxios(url, title) {
-  //     axios({
-  //       method: 'get',
-  //       url,
-  //       responseType: 'arraybuffer',
-  //     })
-  //       .then((response) => {
-  //         this.forceFileDownload(response, title)
-  //       })
-  //       .catch(() => console.log('error occured'))
-  //   },
-  // }
 };
 </script>
 
@@ -132,7 +111,6 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
   color: #6f1d1bff;
-  font-weight: bold;
   border-bottom: 2px solid #6f1d1bff;
 }
 
@@ -142,7 +120,7 @@ h1 {
   display: grid;
   justify-items: center;
   align-items: start;
-  row-gap: 2vh;
+  row-gap: 1vh;
 
   .concept-unit {
     width: 80%;
@@ -164,7 +142,6 @@ h1 {
       font-weight: bold;
       font-size: 1rem;
       color: #6f1d1bff;
-      font-weight: bold;
     }
 
     p {
@@ -201,25 +178,44 @@ h1 {
         box-shadow: 3px 3px 3px grey;
       }
     }
+  }
+
+  #details {
+    width: 100%;
+    min-height: 35vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    margin-top: 1em;
 
     h3 {
       width: 80%;
-      padding: 0;
-      margin-top: 1em;
+      padding-top: 0.5em;
+      margin: 1em 0 1em 0;
       font-weight: bold;
       font-size: 0.8rem;
       text-align: justify;
+      border-top: 1px solid black;
+    }
+
+    p {
+      width: 80%;
+      font-size: 0.8rem;
+      padding-bottom: 0.5em;
+      line-height: 1.5em;
+      text-align: justify;
+      border-bottom: 1px solid black;
     }
   }
+}
 
-  p {
-    width: 80%;
-    font-size: 0.8rem;
-    margin-top: 1em;
-    padding: 0;
-    line-height: 1.5em;
-    text-align: justify;
-  }
+button {
+  width: 50%;
+  padding: 0.5em;
+  color: black;
+  border: 2px solid red;
+  font-weight: bold;
+  margin: 1.5em 0 2em 0;
 }
 
 #skills {
@@ -231,19 +227,98 @@ h1 {
   margin-top: 1em;
 
   h2 {
-      width: 90%;
-      padding: 0;
-      margin: 0;
-      font-weight: bold;
-      font-size: 0.8rem;
-      color: #6f1d1bff;
-      font-weight: bold;
-      border-bottom: 1px solid #6f1d1bff;
-      margin-bottom: 1em;
-    }
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #6f1d1bff;
+    font-weight: bold;
+    border-bottom: 1px solid #6f1d1bff;
+    margin-bottom: 1em;
+  }
 
   img {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    width: 25%;
+    margin: 1em 0 1em 0;
+    font-size: 2rem;
+  }
+
+  #concept-container {
+    grid-template-columns: 1fr 1fr;
+
+    .concept-unit {
+      width: 80%;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      h2 {
+        margin-top: 0.5em;
+        font-size: 1.5rem;
+      }
+
+      p {
+        width: 90%;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  #profile {
+    min-height: 40vh;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+    width: 90%;
+
+    #bio {
+      #portrait {
+        width: 100%;
+
+        img {
+          width: 100%;
+          box-shadow: 5px 5px 5px grey;
+        }
+      }
+    }
+
+    #details {
+      h3 {
+        width: 100%;
+        margin-top: 0;
+        font-size: 1.2rem;
+        padding-top: 1.2em;
+        line-height: 1.5em;
+      }
+
+      p {
+        width: 100%;
+        font-size: 1.1rem;
+        padding-bottom: 1.5em;
+        line-height: 1.5em;
+      }
+    }
+  }
+
+  button {
+    width: 30vw;
+    margin-top: 1em;
+    font-size: 1.2rem;
+  }
+
+  #skills {
+    h2 {
+      width: 85%;
+      font-size: 1.5rem;
+    }
   }
 }
 </style>

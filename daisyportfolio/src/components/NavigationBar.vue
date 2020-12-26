@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import cookies from "vue-cookies"
+import cookies from "vue-cookies";
 export default {
   data() {
     return {
@@ -45,34 +45,34 @@ export default {
       this.display = true;
     },
     goToHome: function () {
-      cookies.set("currentPage", 0)
-      this.$store.commit("changePage", 0)
-      console.log(this.active)
+      cookies.set("currentPage", 0);
+      this.$store.commit("changePage", 0);
+      console.log(this.active);
       this.$router.push("/");
     },
     goToAbout: function () {
-      cookies.set("currentPage", 1)
-      this.$store.commit("changePage", 1)
-      console.log(this.active)
+      cookies.set("currentPage", 1);
+      this.$store.commit("changePage", 1);
+      console.log(this.active);
       this.$router.push("/about");
     },
     goToProjects: function () {
-      cookies.set("currentPage", 2)
-      this.$store.commit("changePage", 2)
-      console.log(this.active)
+      cookies.set("currentPage", 2);
+      this.$store.commit("changePage", 2);
+      console.log(this.active);
       this.$router.push("/projects");
     },
     goToContact: function () {
-      cookies.set("currentPage", 3)
-      this.$store.commit("changePage", 3)
-      console.log(this.active)
+      cookies.set("currentPage", 3);
+      this.$store.commit("changePage", 3);
+      console.log(this.active);
       this.$router.push("/contact");
     },
   },
   computed: {
     active() {
       return this.$store.getters.pageGet;
-    }
+    },
   },
 };
 </script>
@@ -113,7 +113,6 @@ export default {
 
   h3 {
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     letter-spacing: 5px;
   }
@@ -124,7 +123,7 @@ export default {
   width: 100%;
   display: grid;
   justify-items: left;
-  align-items: left;
+  align-items: center;
   position: absolute;
   top: 8vh;
   background-color: black;
@@ -132,15 +131,37 @@ export default {
   z-index: 100;
 
   h2 {
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
     font-size: 0.8rem;
     margin-left: 2em;
     color: white;
   }
 
-  .isActive {
-    color: red;
+}
+
+@media only screen and (min-width: 600px) {
+  #header {
+
+    .icon {
+
+      img {
+        height: 40px;
+      }
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      letter-spacing: 8px;
+    }
+  }
+
+  #nav-bar {
+
+    h2 {
+      font-size: 1.5rem;
+      margin-left: 3em;
+    }
+
   }
 }
 </style>

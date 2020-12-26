@@ -33,21 +33,20 @@ export default {
 <style lang="scss" scoped>
 #footer {
   width: 100%;
-  height: 30vh;
+  height: 25vh;
   display: grid;
   justify-items: center;
   align-items: center;
 }
 
 #contact {
-  height: 25vh;
+  height: 20vh;
   width: 100%;
   display: grid;
   justify-items: center;
   align-items: start;
   grid-template-columns: 1fr 1fr;
   background-color: darkgrey;
-  opacity: 0.9;
   padding-top: 0.5em;
 
   .item {
@@ -65,7 +64,6 @@ export default {
 
     h4 {
       font-weight: normal;
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.8rem;
       margin: 0;
     }
@@ -78,22 +76,48 @@ export default {
   display: grid;
   justify-items: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
   background-color: black;
 
   h4 {
     font-weight: normal;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     color: lightgrey;
   }
 
   #text {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     color: red;
     font-weight: normal;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  
+  #contact {
+    padding-top: 1em;
+
+    .item {
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #copyright {
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    #text {
+      font-size: 1rem;
+    }
   }
 }
 </style>

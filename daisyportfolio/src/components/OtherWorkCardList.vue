@@ -24,7 +24,7 @@ export default {
           cover_image: require("@/assets/Wayfinding_cover.png"),
           name: "Way-finding System Design",
           purpose:
-            "A comprehensive Environmental Design for A General Hospital",
+            "A comprehensive Environmental Design",
           language: "PHOTOSHOP, ILLUSTRATOR, INDESIGN, CAD, SKETCHUP",
           description:
             "Effective way-finding strategy and signage design are created to optimize patients’ and visitors’ navigation experience.",
@@ -47,11 +47,7 @@ export default {
             {
               id: 3,
               image: require("@/assets/Wayfinding_4.png"),
-            },
-            {
-              id: 4,
-              image: require("@/assets/Wayfinding_5.png"),
-            },
+            }
           ],
         },
         {

@@ -24,8 +24,12 @@
         <p>{{ work.description }}</p>
         <div class="button">
           <button v-if="url != ''" @click="redirect(url)">VIEW SITE</button>
-          <button v-if="github_front != ''" @click="redirect(github_front)">GITHUB FRONT-END</button>
-          <button v-if="github_back != ''" @click="redirect(github_back)">GITHUB BACK-END</button>
+          <button v-if="github_front != ''" @click="redirect(github_front)">
+            GITHUB FRONT-END
+          </button>
+          <button v-if="github_back != ''" @click="redirect(github_back)">
+            GITHUB BACK-END
+          </button>
         </div>
         <div @click="open" class="close icon">
           <img src="../assets/close-icon.png" alt="close icon" />
@@ -53,7 +57,7 @@ export default {
       currentImag: "",
       url: this.work.website,
       github_front: this.work.github_front,
-      github_back: this.work.github_back
+      github_back: this.work.github_back,
     };
   },
   mounted: function () {
@@ -142,7 +146,6 @@ export default {
   justify-items: center;
   align-items: center;
   opacity: 0;
-  padding: 0;
   position: absolute;
   z-index: 40;
   background-color: white;
@@ -239,10 +242,11 @@ img {
   }
 
   p {
-    width: 85%;
+    width: 90%;
     font-size: 0.8rem;
     margin: 0;
     line-height: 1.5em;
+    text-align: justify;
   }
 
   .button {
@@ -278,6 +282,81 @@ img {
       width: 15px;
       height: 15px;
       align-content: right;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .work-card {
+    height: 50vh;
+  }
+
+  .description {
+    height: 50vh;
+    padding: 5em 0 5em 0;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .purpose {
+      font-size: 1.5rem;
+      line-height: 1.5em;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    button {
+      width: 30vw;
+      font-size: 1.5rem;
+    }
+  }
+
+  .slider {
+    height: 65vh;
+  }
+
+  img {
+    height: 65vh;
+  }
+
+  .content {
+    width: 100%;
+    min-height: 35vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    padding: 1em 0 1em 0;
+    background-color: lightgrey;
+
+    h3 {
+      width: 20%;
+      font-size: 1.5rem;
+      margin: 1em 0 0.5em 0;
+      padding-bottom: 0.2em;
+      border-bottom: 1px solid grey;
+    }
+
+    p {
+      width: 90%;
+      font-size: 1.2rem;
+      padding-bottom: 0.5em;
+    }
+
+    .button {
+      button {
+        width: 70%;
+        font-size: 1rem;
+      }
+    }
+
+    .icon {
+      img {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

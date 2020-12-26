@@ -16,10 +16,11 @@
     </div>
     <div class="work-show" v-if="display">
       <p>
-        The selected works demonstrate that I have a great design sensibility for graphics, style and user interface
-        heuristics with deep knowledge of various programming languages; and am
-        able to be proficient with graphic design software and familiar with
-        responsive web design, SEO and user-friendly web application.
+        The selected works demonstrate that I have a great design sensibility
+        for graphics, style and user interface heuristics with deep knowledge of
+        various programming languages; and am able to be proficient with graphic
+        design software and familiar with responsive web design, SEO and
+        user-friendly web application.
       </p>
       <work-card-list></work-card-list>
     </div>
@@ -30,7 +31,7 @@
         analytical problem-solving ability; strong two dimensional & three
         dimensional communication and computer-aided design skills, all of which
         are indispensable to succeed in graphic design. It is the in-depth
-        research, eff ective communication with clients, creative design process
+        research, effective communication with clients, creative design process
         and comprehensive thought from conceptualization towards execution that
         serve me well when doing multi-displinary design.
       </p>
@@ -44,13 +45,13 @@
 import NavigationBar from "../components/NavigationBar.vue";
 import OtherWorkCardList from "../components/OtherWorkCardList.vue";
 import WorkCardList from "../components/WorkCardList.vue";
-import FooterBar from "../components/Footer.vue"
+import FooterBar from "../components/Footer.vue";
 export default {
   components: {
     WorkCardList,
     NavigationBar,
     OtherWorkCardList,
-    FooterBar
+    FooterBar,
   },
   data() {
     return {
@@ -61,15 +62,15 @@ export default {
     getWeb: function () {
       this.display = true;
       document.getElementById("web").style.color = "#bb9457ff";
-      document.getElementById("other").style.color = "#6f1d1bff";
+      document.getElementById("other").style.color = "black";
     },
     getOther: function () {
       this.display = false;
       document.getElementById("other").style.color = "#bb9457ff";
-      document.getElementById("web").style.color = "#6f1d1bff";
+      document.getElementById("web").style.color = "black";
     },
   },
-  mounted () {
+  mounted() {
     this.getWeb();
   },
 };
@@ -91,7 +92,6 @@ export default {
   justify-items: center;
   align-items: start;
   align-content: start;
-  // margin-bottom: 1em;
 
   h1 {
     width: 40%;
@@ -100,7 +100,6 @@ export default {
     font-weight: bold;
     font-size: 1.5rem;
     color: #6f1d1bff;
-    font-weight: bold;
     border-bottom: 2px solid #6f1d1bff;
   }
 
@@ -145,7 +144,45 @@ export default {
     padding: 0.5em;
     line-height: 1.3em;
     text-align: justify;
-    margin-bottom: 1em;
+    margin: 1em 0 1em 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0.5em 0 0.5em 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  #title {
+
+    h1 {
+      width: 25%;
+      margin: 1em 0 1em 0;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      padding: 1em;
+    }
+
+    #category {
+
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .work-show {
+
+    p {
+      font-size: 1.2rem;
+      padding: 1em;
+      line-height: 1.5em;
+      margin: 1em 0 2em 0;
+      padding: 1em 0 1em 0;
+    }
   }
 }
 </style>

@@ -21,8 +21,9 @@
           <h4>403.926.3495</h4>
         </div>
       </div>
+      <button>Download Resume</button>
       <button @click="redirect('https://form.123formbuilder.com/5762072/form')">
-        Price Quote Request Form
+        Request Project Quote
       </button>
       <div id="footer">
         <h4>DAISY TONG<span id="text">@2020</span></h4>
@@ -73,13 +74,14 @@ export default {
   opacity: 0.6;
 
   h1 {
-    width: 60%;
+    width: 80%;
     padding: 0;
     margin: 2em 0 1em 0;
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
     font-weight: bold;
+    letter-spacing: 0.2em;
   }
 
   #contact {
@@ -90,7 +92,6 @@ export default {
     align-items: start;
     padding: 1em 0 1em 0;
     background-color: white;
-    opacity: 0.9;
     box-shadow: 3px 3px 2px black;
 
     .item {
@@ -108,7 +109,6 @@ export default {
 
       h4 {
         font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 0.8rem;
         margin: 0.5em;
       }
@@ -132,20 +132,62 @@ export default {
   align-items: center;
   position: fixed;
   bottom: 0;
-  background-color: black;
+  background-color: darkgrey;
 
   h4 {
     font-weight: normal;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
-    color: lightgrey;
+    color: black;
   }
 
   #text {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     color: red;
     font-weight: normal;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  #contact-container {
+
+    h1 {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    #contact {
+      width: 50%;
+      box-shadow: 5px 5px 5px black;
+
+      .item {
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        h4 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    button {
+      width: 50%;
+      font-size: 1.5rem;
+    }
+  }
+
+  #footer {
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    #text {
+      font-size: 1rem;
+    }
   }
 }
 </style>
