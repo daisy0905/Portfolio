@@ -1,0 +1,70 @@
+<template>
+  <div id="nav-desktop">
+    <div id="header">
+      <h2>DAISY TONG</h2>
+      <div></div>
+      <h3 @click="goToHome">HOME</h3>
+      <h3 @click="goToAbout">ABOUT</h3>
+      <h3 @click="goToProjects">PROJECTS</h3>
+      <h3 @click="goToContact">CONTACT</h3>
+      <div></div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    goToHome: function () {
+      this.$router.push("/");
+    },
+    goToAbout: function () {
+      this.$router.push("/about");
+    },
+    goToProjects: function () {
+      this.$router.push("/projects");
+    },
+    goToContact: function () {
+      this.$router.push("/contact");
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+#nav-desktop {
+  height: 12vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  padding: 10px 0 0 0;
+  margin-bottom: 1em;
+  z-index: 100;
+  margin-bottom: 0.5em;
+}
+
+#header {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% repeat(5, 10%) auto;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid darkgrey;
+
+  h2 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2em;
+    color: black;
+  }
+}
+</style>

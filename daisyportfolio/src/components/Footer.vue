@@ -40,14 +40,14 @@ export default {
 }
 
 #contact {
-  height: 20vh;
+  height: 22vh;
   width: 100%;
   display: grid;
   justify-items: center;
   align-items: start;
   grid-template-columns: 1fr 1fr;
   background-color: darkgrey;
-  padding-top: 0.5em;
+  padding: 1em 0 0.5em 0;
 
   .item {
     height: 10vh;
@@ -92,12 +92,10 @@ export default {
 }
 
 @media only screen and (min-width: 600px) {
-  
   #contact {
     padding-top: 1em;
 
     .item {
-
       img {
         width: 30px;
         height: 30px;
@@ -110,13 +108,46 @@ export default {
   }
 
   #copyright {
-
     h4 {
       font-size: 1rem;
     }
 
     #text {
       font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  #footer {
+    min-height: 20vh;
+  }
+
+  #contact {
+    align-items: center;
+    padding: 1em 0 1em 0;
+    grid-template-columns: 1fr 1fr;
+
+    .item {
+      height: 0;
+      justify-items: left;
+      grid-template-columns: 20% 80%;
+      margin-left: 10em;
+
+      h4 {
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
+  }
+
+  #copyright {
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    #text {
+      font-size: 1.2rem;
     }
   }
 }

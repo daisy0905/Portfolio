@@ -291,6 +291,25 @@ img {
     height: 50vh;
   }
 
+  .image {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    row-gap: 0;
+    padding: 0;
+    margin-top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding-top: 0;
+      border: 3px solid white;
+    }
+  }
+
   .description {
     height: 50vh;
     padding: 5em 0 5em 0;
@@ -323,8 +342,110 @@ img {
   }
 
   .content {
-    width: 100%;
     min-height: 35vh;
+    padding: 1em 0 1em 0;
+
+    h3 {
+      width: 20%;
+      font-size: 1.5rem;
+      margin: 1em 0 0.5em 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      padding-bottom: 0.5em;
+    }
+
+    .button {
+      button {
+        width: 70%;
+        font-size: 1rem;
+      }
+    }
+
+    .icon {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .work-card {
+    height: 40vh;
+  }
+
+  .description {
+    height: 40vh;
+    padding: 3em 0 3em 0;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .purpose {
+      font-size: 1.5rem;
+      line-height: 1.5em;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    button {
+      width: 30%;
+      font-size: 1.5rem;
+    }
+  }
+
+  .details {
+    width: 60%;
+    min-height: 70vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    align-content: start;
+    position: fixed;
+    top: 5vh;
+    right: 20vw;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 5px 5px 5px darkgrey;
+  }
+
+  .slider {
+    width: 100%;
+    height: 55vh;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 0.9s ease;
+    overflow: hidden;
+    visibility: visible;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    visibility: hidden;
+    width: 100%;
+    opacity: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+  }
+
+  .content {
+    width: 100%;
+    height: 20vh;
     display: grid;
     justify-items: center;
     align-items: start;

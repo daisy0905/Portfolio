@@ -1,6 +1,7 @@
 <template>
   <div id="projects">
-    <navigation-bar></navigation-bar>
+    <navigation-bar id="nav"></navigation-bar>
+    <nav-desktop id="nav-desktop"></nav-desktop>
     <div id="title">
       <h1>PROJECTS</h1>
       <p>
@@ -22,7 +23,11 @@
         design software and familiar with responsive web design, SEO and
         user-friendly web application.
       </p>
-      <work-card-list></work-card-list>
+      <work-card-list class="mobile-tablet"></work-card-list>
+      <div class="desktop">
+        <vue-work-list class="work-list-1"></vue-work-list>
+        <html-work-list class="work-list-2"></html-work-list>
+      </div>
     </div>
     <div class="work-show" v-if="display == false">
       <p>
@@ -35,7 +40,11 @@
         and comprehensive thought from conceptualization towards execution that
         serve me well when doing multi-displinary design.
       </p>
-      <other-work-card-list></other-work-card-list>
+      <other-work-card-list class="mobile-tablet"></other-work-card-list>
+      <div class="desktop">
+        <other-two-list class="work-list-1"></other-two-list>
+        <other-third class="work-list-2"></other-third>
+      </div>
     </div>
     <footer-bar></footer-bar>
   </div>
@@ -46,12 +55,22 @@ import NavigationBar from "../components/NavigationBar.vue";
 import OtherWorkCardList from "../components/OtherWorkCardList.vue";
 import WorkCardList from "../components/WorkCardList.vue";
 import FooterBar from "../components/Footer.vue";
+import NavDesktop from "../components/NavDesktop.vue";
+import VueWorkList from "../components/VueWorkList.vue";
+import HtmlWorkList from "../components/HtmlWorkList.vue";
+import OtherTwoList from "../components/OtherTwo.vue"
+import OtherThird from "../components/OtherThird.vue"
 export default {
   components: {
     WorkCardList,
     NavigationBar,
     OtherWorkCardList,
     FooterBar,
+    NavDesktop,
+    HtmlWorkList,
+    VueWorkList,
+    OtherTwoList,
+    OtherThird
   },
   data() {
     return {
@@ -83,6 +102,10 @@ export default {
   display: grid;
   justify-items: center;
   align-items: start;
+}
+
+#nav-desktop {
+  display: none;
 }
 
 #title {
@@ -151,9 +174,14 @@ export default {
   }
 }
 
+.desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
 
   #title {
+    height: 40vh;
 
     h1 {
       width: 25%;
@@ -164,10 +192,10 @@ export default {
     p {
       font-size: 1.2rem;
       padding: 1em;
+      line-height: 1.5em;
     }
 
     #category {
-
       h3 {
         font-size: 1.5rem;
       }
@@ -175,13 +203,80 @@ export default {
   }
 
   .work-show {
-
     p {
       font-size: 1.2rem;
       padding: 1em;
       line-height: 1.5em;
       margin: 1em 0 2em 0;
       padding: 1em 0 1em 0;
+    }
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #nav {
+    display: none;
+  }
+
+  #nav-desktop {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  #title {
+    h1 {
+      width: 15%;
+      margin: 1em 0 1em 0;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      padding: 1em;
+    }
+
+    #category {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .work-show {
+    p {
+      font-size: 1.5rem;
+    }
+
+    .mobile-tablet {
+      display: none;
+    }
+
+    .desktop {
+      width: 100%;
+      min-height: 30vh;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+
+      .work-list-1 {
+        width: 100%;
+        min-height: 30vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .work-list-2 {
+        width: 50%;
+        min-height: 30vh;
+        display: grid;
+      }
     }
   }
 }

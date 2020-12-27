@@ -100,4 +100,17 @@ export default {
     }
   }
 }
+
+@media only screen and (min-width: 1240px) {
+  #home {
+
+    h1 {
+      letter-spacing: 0.3em;
+    }
+
+    h2 {
+      width: 30%;
+    }
+  }
+}
 </style>

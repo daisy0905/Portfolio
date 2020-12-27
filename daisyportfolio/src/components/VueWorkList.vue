@@ -2,7 +2,7 @@
   <div>
     <work-card
       class="works"
-      v-for="work in works"
+      v-for="work in vueworks"
       :key="work.id"
       :work="work"
     ></work-card>
@@ -12,13 +12,14 @@
 <script>
 import WorkCard from "./WorkCard.vue";
 export default {
-  name: "work-card-list",
+  name: "vue-work-list",
   components: {
     WorkCard,
   },
   computed: {
-    works: function() {
-      return this.$store.state.works 
+    vueworks: function() {
+        console.log(this.$store.getters.getVue)
+      return this.$store.getters.getVue 
     }
   },
 };

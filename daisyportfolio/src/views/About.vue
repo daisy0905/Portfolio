@@ -1,6 +1,7 @@
 <template>
   <div id="about">
     <navigation-bar id="nav"></navigation-bar>
+    <nav-desktop id="nav-desktop"></nav-desktop>
     <div id="body">
       <h1>ABOUT</h1>
       <div id="concept-container">
@@ -74,10 +75,12 @@
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
 import FooterBar from "../components/Footer.vue";
+import NavDesktop from "../components/NavDesktop.vue";
 export default {
   components: {
     NavigationBar,
     FooterBar,
+    NavDesktop,
   },
 };
 </script>
@@ -94,6 +97,10 @@ export default {
 #nav {
   height: 8vh;
   width: 100%;
+}
+
+#nav-desktop {
+  display: none;
 }
 
 #body {
@@ -318,6 +325,79 @@ button {
     h2 {
       width: 85%;
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #nav {
+    display: none;
+  }
+
+  #nav-desktop {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  h1 {
+    width: 15%;
+    margin: 1em 0 1em 0;
+    font-size: 2.5rem;
+  }
+
+  #concept-container {
+    min-height: 25vh;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1.5em;
+
+    .concept-unit {
+      width: 70%;
+    }
+  }
+
+  #profile {
+    width: 80%;
+    min-height: 30vh;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3em;
+
+    #bio {
+      #portrait {
+        width: 90%;
+
+        img {
+          width: 100%;
+          box-shadow: 5px 5px 5px grey;
+        }
+      }
+    }
+
+    #details {
+      h3 {
+        font-size: 1.6rem;
+        padding-top: 2.5em;
+      }
+
+      p {
+        font-size: 1.5rem;
+        padding-bottom: 2.5em;
+      }
+    }
+  }
+
+  button {
+    width: 25vw;
+    margin-top: 2.5em;
+    font-size: 1.5rem;
+  }
+
+  #skills {
+    h2 {
+      width: 60%;
+      font-size: 2rem;
     }
   }
 }
