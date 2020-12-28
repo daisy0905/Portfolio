@@ -159,12 +159,12 @@ export default {
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: darkgrey;
+  background-color: black;
 
   h4 {
     font-weight: normal;
     font-size: 0.8rem;
-    color: black;
+    color: lightgrey;
   }
 
   #text {
