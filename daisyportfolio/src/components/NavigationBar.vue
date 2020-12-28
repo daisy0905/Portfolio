@@ -20,21 +20,31 @@
     </div>
     <div v-if="display == false" id="nav-bar">
       <div></div>
-      <h2 @click="goToHome" :class="{ isActive: active }">HOME</h2>
-      <h2 @click="goToAbout" :class="{ isActive: 1 }">ABOUT</h2>
-      <h2 @click="goToProjects" :class="{ isActive: 2 }">PROJECTS</h2>
-      <h2 @click="goToContact" :class="{ isActive: 3 }">CONTACT</h2>
+      <h2 :style="home" @click="goToHome">HOME</h2>
+      <h2 :style="about" @click="goToAbout">ABOUT</h2>
+      <h2 :style="projects" @click="goToProjects">PROJECTS</h2>
+      <h2 :style="contact" @click="goToContact">CONTACT</h2>
       <div></div>
     </div>
   </div>
 </template>
 
 <script>
-import cookies from "vue-cookies";
 export default {
   data() {
     return {
       display: true,
+      disactive: {
+        color: "black"
+      },
+      active: {
+        color: "#bb9457ff",
+        fontWeight: "bold"
+      },
+      home: {},
+      about: {},
+      projects: {},
+      contact: {}
     };
   },
   methods: {
@@ -45,35 +55,29 @@ export default {
       this.display = true;
     },
     goToHome: function () {
-      cookies.set("currentPage", 0);
-      this.$store.commit("changePage", 0);
-      console.log(this.active);
       this.$router.push("/");
     },
     goToAbout: function () {
-      cookies.set("currentPage", 1);
-      this.$store.commit("changePage", 1);
-      console.log(this.active);
       this.$router.push("/about");
     },
     goToProjects: function () {
-      cookies.set("currentPage", 2);
-      this.$store.commit("changePage", 2);
-      console.log(this.active);
       this.$router.push("/projects");
     },
     goToContact: function () {
-      cookies.set("currentPage", 3);
-      this.$store.commit("changePage", 3);
-      console.log(this.active);
       this.$router.push("/contact");
     },
   },
-  computed: {
-    active() {
-      return this.$store.getters.pageGet;
-    },
-  },
+  mounted () {
+    if(this.$router.history.current.path == "/") {
+      this.home = this.active
+    } else if(this.$router.history.current.path == "/about") {
+      this.about = this.active
+    } else if(this.$router.history.current.path == "/projects") {
+      this.projects = this.active
+    } else if(this.$router.history.current.path == "/contact") {
+      this.contact = this.active
+    }
+  }
 };
 </script>
 

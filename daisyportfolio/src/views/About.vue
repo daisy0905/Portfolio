@@ -59,7 +59,7 @@
           </p>
         </div>
       </div>
-      <button>DOWNLOAD RESUME</button>
+      <button @click="redirect('https://www.dropbox.com/s/kr389xugehy8yrl/Resume_Daisy%20Tong.pdf?dl=0')">DOWNLOAD RESUME</button>
       <div id="skills">
         <h2>SOFTWARE SKILLS & WEB TECHNOLOGY</h2>
         <img
@@ -82,6 +82,11 @@ export default {
     FooterBar,
     NavDesktop,
   },
+  methods: {
+    redirect: function (link, target = "_blank") {
+      window.open(link, target);
+    },
+  }
 };
 </script>
 

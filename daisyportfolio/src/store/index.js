@@ -38,11 +38,11 @@ export default new Vuex.Store({
       {
         id: 1,
         cover_image: require("@/assets/Tweeter_cover.png"),
-        name: "Full Stack Tweeter Project",
+        name: "Full-Stack Tweeter Project",
         purpose: "A Mobile Social Media Application Design",
         language: "Flask Python, Restful API, Vue.js, Vuex",
         description:
-          "Built a mobile social media application whose server-side is created by Flask Python and Restful API in collaboration with database and client-side is created by Vue.js and Vuex; its features include social authorization, feed, post and comments creation, edit and delete, post and comments likes, user profile and search; focused on mobile responsive and a proper web application.",
+          "Built a mobile social media application whose server-side is created by Flask Python and Restful API in collaboration with database and client-side is created by Vue.js and Vuex; its features include social authorization, feed, post and comments creation, edit and delete; post and comments likes, user profile and search; focused on mobile responsive and a proper web application.",
         website: "https://daisyfulltweeter.ml",
         github_front: "https://github.com/daisy0905/Tweeter-frontend.git",
         github_back: "https://github.com/daisy0905/Tweeter-backend.git",
@@ -65,7 +65,7 @@ export default new Vuex.Store({
         id: 1,
         cover_image: require("@/assets/ArtistWebsite_cover.png"),
         name: "Artist Website Project",
-        purpose: "A Fully Responsive Artist Website Design",
+        purpose: "A Fully Responsive Website Design",
         language: "Flask Python, Restful API, Vue.js, Vuex",
         description:
           "It is an advanced full-stack web development project in the use of database, Flaks Python, Restful API and Vue.js and Vuex; created features for visitors and the artist including visitors’ reviewing artwork, submitting enquiry and ordering the artwork, and subscribing to the newsletter; the artist’s reviewing artwork inventory, uploading, updating and deleting artwork, checking artworks’ status, visitors' enquiries and contact information for follow-up; the website is fully responsive.",
@@ -102,8 +102,8 @@ export default new Vuex.Store({
         cover_image: require("@/assets/Wayfinding_cover.png"),
         name: "Way-finding System Design",
         purpose:
-          "A comprehensive Environmental Design",
-        language: "PHOTOSHOP, ILLUSTRATOR, INDESIGN, CAD, SKETCHUP",
+          "A Comprehensive Environmental Design",
+        language: "Photoshop, Illustrator, Indesign, AutoCAD, Sketchup",
         description:
           "Effective way-finding strategy and signage design are created to optimize patients’ and visitors’ navigation experience.",
         website: "",
@@ -134,7 +134,7 @@ export default new Vuex.Store({
         name: "Diagram Design",
         purpose:
           "Thinking with diagram is essential for problem solving in design principles.",
-        language: "PHOTOSHOP, ILLUSTRATOR, INDESIGN, CAD, REVIT, SKETCHUP",
+        language: "Photoshop, Illustrator, Indesign, AutoCAD, Sketchup",
         description:
           "The '3D' diagrams clearly illustrate how sustainable design principles are incorporated into site and building environment as architecture grows step by step.",
         website: "",
@@ -162,7 +162,7 @@ export default new Vuex.Store({
         purpose:
           "Design is not just what it looks like and feels like. Design is how it works.",
         language:
-          "PHOTOSHOP, ILLUSTRATOR, INDESIGN, POWERPOINT, CAD, REVIT, SKETCHUP",
+          "Photoshop, Illustrator, Indesign, AutoCAD, Sketchup, RevitArchitecture",
         description:
           "The images, typography, space, layout and color are carefully considered and designed to create interfaces that optimize user experience and drive conversion.",
         website: "",
@@ -189,16 +189,9 @@ export default new Vuex.Store({
       },
     ],
   },
-  mutations: {
-    changePage: function(state, data) {
-      state.activePage = data
-    },
-  },
+  mutations: {},
   actions: {},
   getters: {
-    pageGet: function(state) {
-      return state.activePage;
-    },
     getVue: function(state) {
       let vueWorks = [];
       for(let i=0; i<state.works.length; i++) {

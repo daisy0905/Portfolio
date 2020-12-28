@@ -24,7 +24,7 @@
           </div>
         </div>
         <div id="button">
-          <button>Download Resume</button>
+          <button @click="redirect('https://www.dropbox.com/s/kr389xugehy8yrl/Resume_Daisy%20Tong.pdf?dl=0')">Download Resume</button>
           <button
             @click="redirect('https://form.123formbuilder.com/5762072/form')"
           >

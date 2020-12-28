@@ -5,10 +5,10 @@
     <div id="title">
       <h1>PROJECTS</h1>
       <p>
-        My portfolio collects 3 main course projects completed during the Full
-        Stack Web Development Diploma program. In addition, some selected works
-        related to my graphic and architectural design experience are also
-        included to better demonstrate my strong visual design capability.
+        My portfolio collects 3 main course projects completed during Full-Stack
+        Development Diploma program. In addition, some selected works related to
+        my graphic and architectural design experience are also included to
+        better demonstrate my strong visual design capability.
       </p>
       <div id="category">
         <h3 id="web" @click="getWeb">WEB DEVELOPMENT</h3>
@@ -58,8 +58,8 @@ import FooterBar from "../components/Footer.vue";
 import NavDesktop from "../components/NavDesktop.vue";
 import VueWorkList from "../components/VueWorkList.vue";
 import HtmlWorkList from "../components/HtmlWorkList.vue";
-import OtherTwoList from "../components/OtherTwo.vue"
-import OtherThird from "../components/OtherThird.vue"
+import OtherTwoList from "../components/OtherTwo.vue";
+import OtherThird from "../components/OtherThird.vue";
 export default {
   components: {
     WorkCardList,
@@ -70,7 +70,7 @@ export default {
     HtmlWorkList,
     VueWorkList,
     OtherTwoList,
-    OtherThird
+    OtherThird,
   },
   data() {
     return {
@@ -179,9 +179,8 @@ export default {
 }
 
 @media only screen and (min-width: 600px) {
-
   #title {
-    height: 40vh;
+    height: 33vh;
 
     h1 {
       width: 25%;
@@ -231,6 +230,8 @@ export default {
   }
 
   #title {
+    height: 40vh;
+
     h1 {
       width: 15%;
       margin: 1em 0 1em 0;

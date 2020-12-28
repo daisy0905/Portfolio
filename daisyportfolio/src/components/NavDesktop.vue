@@ -3,10 +3,10 @@
     <div id="header">
       <h2>DAISY TONG</h2>
       <div></div>
-      <h3 @click="goToHome">HOME</h3>
-      <h3 @click="goToAbout">ABOUT</h3>
-      <h3 @click="goToProjects">PROJECTS</h3>
-      <h3 @click="goToContact">CONTACT</h3>
+      <h3 :style="home" @click="goToHome">HOME</h3>
+      <h3 :style="about" @click="goToAbout">ABOUT</h3>
+      <h3 :style="projects" @click="goToProjects">PROJECTS</h3>
+      <h3 :style="contact" @click="goToContact">CONTACT</h3>
       <div></div>
     </div>
   </div>
@@ -14,6 +14,18 @@
 
 <script>
 export default {
+  data() {
+    return {
+      active: {
+        color: "#bb9457ff",
+        fontWeight: "bold",
+      },
+      home: {},
+      about: {},
+      projects: {},
+      contact: {},
+    };
+  },
   methods: {
     goToHome: function () {
       this.$router.push("/");
@@ -27,6 +39,17 @@ export default {
     goToContact: function () {
       this.$router.push("/contact");
     },
+  },
+  mounted() {
+    if (this.$router.history.current.path == "/") {
+      this.home = this.active;
+    } else if (this.$router.history.current.path == "/about") {
+      this.about = this.active;
+    } else if (this.$router.history.current.path == "/projects") {
+      this.projects = this.active;
+    } else if (this.$router.history.current.path == "/contact") {
+      this.contact = this.active;
+    }
   },
 };
 </script>
