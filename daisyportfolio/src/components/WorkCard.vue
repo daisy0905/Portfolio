@@ -374,12 +374,12 @@ img {
 
 @media only screen and (min-width: 1024px) {
   .work-card {
-    height: 40vh;
+    height: 60vh;
   }
 
   .description {
-    height: 40vh;
-    padding: 3em 0 3em 0;
+    height: 60vh;
+    padding: 6em 0 6em 0;
 
     h2 {
       font-size: 2rem;
@@ -391,7 +391,7 @@ img {
     }
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
     button {
@@ -401,15 +401,15 @@ img {
   }
 
   .details {
-    width: 60%;
+    width: 45%;
     min-height: 70vh;
     display: grid;
     justify-items: center;
     align-items: start;
     align-content: start;
     position: fixed;
-    top: 5vh;
-    right: 20vw;
+    top: 0;
+    right: 27vw;
     z-index: 100;
     background-color: white;
     box-shadow: 5px 5px 5px darkgrey;
@@ -445,11 +445,11 @@ img {
 
   .content {
     width: 100%;
-    height: 20vh;
+    min-height: 20vh;
     display: grid;
     justify-items: center;
     align-items: start;
-    padding: 1em 0 1em 0;
+    padding: 0 0 1em 0;
     background-color: lightgrey;
 
     h3 {
@@ -468,8 +468,9 @@ img {
 
     .button {
       button {
-        width: 70%;
-        font-size: 1rem;
+        width: 75%;
+        font-size: 0.8rem;
+        padding-bottom: 0.5em;
       }
     }
 

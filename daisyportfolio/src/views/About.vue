@@ -35,7 +35,7 @@
             alt="the image shows dynamic concept"
           />
           <h2>DYNAMIC</h2>
-          <p>I love making pages come to life.</p>
+          <p>Websites is not static, I love making pages come to life.</p>
         </div>
       </div>
       <div id="profile">
@@ -43,6 +43,15 @@
           <div id="portrait">
             <img src="../assets/portrait.jpg" alt="portrait" />
           </div>
+          <button
+            @click="
+              redirect(
+                'https://www.dropbox.com/s/kr389xugehy8yrl/Resume_Daisy%20Tong.pdf?dl=0'
+              )
+            "
+          >
+            DOWNLOAD RESUME
+          </button>
         </div>
         <div id="details">
           <h3>
@@ -57,9 +66,15 @@
             not only very clean code but to witness and be apart of the solution
             bringing a design into development.
           </p>
+          <p id="text">
+            I have a great design sensibility for graphics, style and user
+            interface heuristics with deep knowledge of various programming
+            languages; and am able to be proficient with graphic design software
+            and familiar with responsive web design, SEO and user-friendly web
+            application.
+          </p>
         </div>
       </div>
-      <button @click="redirect('https://www.dropbox.com/s/kr389xugehy8yrl/Resume_Daisy%20Tong.pdf?dl=0')">DOWNLOAD RESUME</button>
       <div id="skills">
         <h2>SOFTWARE SKILLS & WEB TECHNOLOGY</h2>
         <img
@@ -86,7 +101,7 @@ export default {
     redirect: function (link, target = "_blank") {
       window.open(link, target);
     },
-  }
+  },
 };
 </script>
 
@@ -175,7 +190,7 @@ h1 {
 
   #bio {
     width: 100%;
-    min-height: 40vh;
+    min-height: 30vh;
     display: grid;
     justify-items: center;
     align-items: start;
@@ -190,15 +205,23 @@ h1 {
         box-shadow: 3px 3px 3px grey;
       }
     }
+
+    button {
+      width: 50%;
+      padding: 0.5em;
+      color: black;
+      border: 2px solid red;
+      font-weight: bold;
+      margin: 1.5em 0 2em 0;
+    }
   }
 
   #details {
     width: 100%;
-    min-height: 35vh;
+    min-height: 30vh;
     display: grid;
     justify-items: center;
     align-items: start;
-    margin-top: 1em;
 
     h3 {
       width: 80%;
@@ -216,18 +239,12 @@ h1 {
       padding-bottom: 0.5em;
       line-height: 1.5em;
       text-align: justify;
+    }
+
+    #text {
       border-bottom: 1px solid black;
     }
   }
-}
-
-button {
-  width: 50%;
-  padding: 0.5em;
-  color: black;
-  border: 2px solid red;
-  font-weight: bold;
-  margin: 1.5em 0 2em 0;
 }
 
 #skills {
@@ -236,7 +253,7 @@ button {
   display: grid;
   justify-items: center;
   align-items: start;
-  margin-top: 1em;
+  margin-top: 2em;
 
   h2 {
     width: 80%;
@@ -293,12 +310,18 @@ button {
 
     #bio {
       #portrait {
-        width: 100%;
+        width: 90%;
 
         img {
           width: 100%;
           box-shadow: 5px 5px 5px grey;
         }
+      }
+
+      button {
+        width: 90%;
+        margin-top: 2em;
+        font-size: 1.2rem;
       }
     }
 
@@ -308,28 +331,23 @@ button {
         margin-top: 0;
         font-size: 1.2rem;
         padding-top: 1.2em;
-        line-height: 1.5em;
+        line-height: 1.2em;
       }
 
       p {
         width: 100%;
         font-size: 1.1rem;
         padding-bottom: 1.5em;
-        line-height: 1.5em;
+        line-height: 1.2em;
       }
     }
-  }
-
-  button {
-    width: 30vw;
-    margin-top: 1em;
-    font-size: 1.2rem;
   }
 
   #skills {
     h2 {
       width: 85%;
       font-size: 1.5rem;
+      margin-top: 1em;
     }
   }
 }
@@ -348,7 +366,7 @@ button {
   }
 
   h1 {
-    width: 15%;
+    width: 10%;
     margin: 1em 0 1em 0;
     font-size: 2.5rem;
   }
@@ -359,50 +377,67 @@ button {
     margin-top: 1.5em;
 
     .concept-unit {
-      width: 70%;
+      width: 80%;
+
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 
   #profile {
-    width: 80%;
+    width: 70%;
     min-height: 30vh;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3em;
+    column-gap: 1em;
 
     #bio {
       #portrait {
-        width: 90%;
+        width: 70%;
+        margin-top: 6em;
 
         img {
           width: 100%;
           box-shadow: 5px 5px 5px grey;
         }
       }
+
+      button {
+        width: 70%;
+        margin-top: 2em;
+        font-size: 1.5rem;
+      }
     }
 
     #details {
+      width: 100%;
+      align-items: start;
+      margin-top: 6em;
+
       h3 {
-        font-size: 1.6rem;
-        padding-top: 2.5em;
+        font-size: 1.5rem;
+        padding-top: 2em;
+        line-height: 1.5em;
       }
 
       p {
         font-size: 1.5rem;
-        padding-bottom: 2.5em;
+        padding-bottom: 2em;
+        line-height: 1.5em;
       }
     }
   }
 
-  button {
-    width: 25vw;
-    margin-top: 2.5em;
-    font-size: 1.5rem;
-  }
-
   #skills {
+    margin-top: 3em;
+
     h2 {
-      width: 60%;
+      width: 55%;
       font-size: 2rem;
+    }
+
+    img {
+      width: 70%;
     }
   }
 }

@@ -5,6 +5,15 @@
     <div id="title">
       <h1>PROJECTS</h1>
       <p>
+        With the design background, I have mastered series of professional
+        skills including rational and logical thinking and innovative and
+        analytical problem-solving ability; strong software and web technology
+        skills, all of which are indispensable to ensure success of projectrs.
+        It is the in-depth research, effective communication with clients,
+        creative design process and comprehensive thought from conceptualization
+        towards execution that serve me well when doing multi-displinary fields.
+      </p>
+      <p>
         My portfolio collects 3 main course projects completed during Full-Stack
         Development Diploma program. In addition, some selected works related to
         my graphic and architectural design experience are also included to
@@ -16,13 +25,6 @@
       </div>
     </div>
     <div class="work-show" v-if="display">
-      <p>
-        The selected works demonstrate that I have a great design sensibility
-        for graphics, style and user interface heuristics with deep knowledge of
-        various programming languages; and am able to be proficient with graphic
-        design software and familiar with responsive web design, SEO and
-        user-friendly web application.
-      </p>
       <work-card-list class="mobile-tablet"></work-card-list>
       <div class="desktop">
         <vue-work-list class="work-list-1"></vue-work-list>
@@ -30,16 +32,6 @@
       </div>
     </div>
     <div class="work-show" v-if="display == false">
-      <p>
-        As a 6-year Design Professional, I have mastered series of professional
-        skills including rational and logical thinking and innovative and
-        analytical problem-solving ability; strong two dimensional & three
-        dimensional communication and computer-aided design skills, all of which
-        are indispensable to succeed in graphic design. It is the in-depth
-        research, effective communication with clients, creative design process
-        and comprehensive thought from conceptualization towards execution that
-        serve me well when doing multi-displinary design.
-      </p>
       <other-work-card-list class="mobile-tablet"></other-work-card-list>
       <div class="desktop">
         <other-two-list class="work-list-1"></other-two-list>
@@ -110,7 +102,7 @@ export default {
 
 #title {
   width: 100%;
-  height: 30vh;
+  min-height: 65vh;
   display: grid;
   justify-items: center;
   align-items: start;
@@ -129,7 +121,7 @@ export default {
   p {
     width: 90%;
     font-size: 0.8rem;
-    padding: 0.5em;
+    padding: 1em;
     line-height: 1.3em;
     text-align: justify;
     background-color: lightgrey;
@@ -160,18 +152,6 @@ export default {
   display: grid;
   justify-items: center;
   align-items: start;
-
-  p {
-    width: 90%;
-    font-size: 0.8rem;
-    padding: 0.5em;
-    line-height: 1.3em;
-    text-align: justify;
-    margin: 1em 0 1em 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 0.5em 0 0.5em 0;
-  }
 }
 
 .desktop {
@@ -180,7 +160,7 @@ export default {
 
 @media only screen and (min-width: 600px) {
   #title {
-    height: 33vh;
+    min-height: 60vh;
 
     h1 {
       width: 25%;
@@ -202,13 +182,7 @@ export default {
   }
 
   .work-show {
-    p {
-      font-size: 1.2rem;
-      padding: 1em;
-      line-height: 1.5em;
-      margin: 1em 0 2em 0;
-      padding: 1em 0 1em 0;
-    }
+    min-height: 100vh;
   }
 
   .desktop {
@@ -230,7 +204,10 @@ export default {
   }
 
   #title {
-    height: 40vh;
+    width: 90%;
+    min-height: 50vh;
+    align-items: start;
+    align-content: start;
 
     h1 {
       width: 15%;
@@ -241,9 +218,12 @@ export default {
     p {
       font-size: 1.5rem;
       padding: 1em;
+      line-height: 2em;
+      width: 100%;
     }
 
     #category {
+      margin-top: 2em;
       h3 {
         font-size: 2rem;
       }
@@ -251,9 +231,11 @@ export default {
   }
 
   .work-show {
-    p {
-      font-size: 1.5rem;
-    }
+    width: 90%;
+    min-height: 100vh;
+    justify-items: center;
+    align-items: start;
+    margin-top: 4em;
 
     .mobile-tablet {
       display: none;
@@ -261,21 +243,21 @@ export default {
 
     .desktop {
       width: 100%;
-      min-height: 30vh;
+      min-height: 60vh;
       display: grid;
       justify-items: center;
       align-items: center;
 
       .work-list-1 {
         width: 100%;
-        min-height: 30vh;
+        min-height: 60vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
 
       .work-list-2 {
         width: 50%;
-        min-height: 30vh;
+        min-height: 60vh;
         display: grid;
       }
     }

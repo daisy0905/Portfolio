@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <h1>Hello, I’m <span>Daisy Tong</span></h1>
-    <h1>I’m a Junior Full-stack Web Developer</h1>
+    <h1>I’m a Junior Full-Stack Web Developer</h1>
     <h2 @click="goToProjects">VIEW MY PROJECTS</h2>
     <img @click="goToAbout" src="../assets/enter_icon.png" alt="enter icon" />
   </div>
@@ -110,6 +110,7 @@ export default {
 
     h2 {
       width: 30%;
+      letter-spacing: 0.3em;
     }
   }
 }
