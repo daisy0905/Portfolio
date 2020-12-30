@@ -78,14 +78,14 @@ export default {
   h2 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 8px;
   }
 
   h3 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-left: 2em;
     color: black;
   }

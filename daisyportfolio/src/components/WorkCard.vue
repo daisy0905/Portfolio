@@ -20,7 +20,6 @@
         <a class="next" @click="next" href="#"></a>
       </div>
       <div class="content">
-        <h3>ABOUT</h3>
         <p>{{ work.description }}</p>
         <div class="button">
           <button v-if="url != ''" @click="redirect(url)">VIEW SITE</button>
@@ -230,16 +229,8 @@ img {
   display: grid;
   justify-items: center;
   align-items: start;
-  padding-top: 0.5em;
+  padding-top: 1.5em;
   background-color: lightgrey;
-
-  h3 {
-    width: 40%;
-    font-size: 1.2rem;
-    margin: 0;
-    padding-bottom: 0.2em;
-    border-bottom: 1px solid grey;
-  }
 
   p {
     width: 90%;
@@ -312,7 +303,7 @@ img {
 
   .description {
     height: 50vh;
-    padding: 5em 0 5em 0;
+    padding: 3em 0 3em 0;
 
     h2 {
       font-size: 2rem;
@@ -328,6 +319,7 @@ img {
     }
 
     button {
+      margin-top: 2em;
       width: 30vw;
       font-size: 1.5rem;
     }
@@ -343,13 +335,7 @@ img {
 
   .content {
     min-height: 35vh;
-    padding: 1em 0 1em 0;
-
-    h3 {
-      width: 20%;
-      font-size: 1.5rem;
-      margin: 1em 0 0.5em 0;
-    }
+    padding: 1.5em 0 1em 0;
 
     p {
       font-size: 1.2rem;
@@ -379,29 +365,30 @@ img {
 
   .description {
     height: 60vh;
-    padding: 6em 0 6em 0;
+    padding: 3em 0 3em 0;
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.2rem;
     }
 
     .purpose {
-      font-size: 1.5rem;
+      font-size: 1rem;
       line-height: 1.5em;
     }
 
     h3 {
-      font-size: 1.5rem;
+      width: 80%;
+      font-size: 1rem;
     }
 
     button {
       width: 30%;
-      font-size: 1.5rem;
+      font-size: 0.8rem;
     }
   }
 
   .details {
-    width: 45%;
+    width: 40%;
     min-height: 70vh;
     display: grid;
     justify-items: center;
@@ -409,7 +396,7 @@ img {
     align-content: start;
     position: fixed;
     top: 0;
-    right: 27vw;
+    right: 30vw;
     z-index: 100;
     background-color: white;
     box-shadow: 5px 5px 5px darkgrey;
@@ -445,32 +432,25 @@ img {
 
   .content {
     width: 100%;
-    min-height: 20vh;
+    height: 45vh;
     display: grid;
     justify-items: center;
     align-items: start;
-    padding: 0 0 1em 0;
+    padding: 1em 0 1em 0;
     background-color: lightgrey;
-
-    h3 {
-      width: 20%;
-      font-size: 1.5rem;
-      margin: 1em 0 0.5em 0;
-      padding-bottom: 0.2em;
-      border-bottom: 1px solid grey;
-    }
 
     p {
       width: 90%;
-      font-size: 1.2rem;
+      height: 30vh;
+      font-size: 0.8rem;
       padding-bottom: 0.5em;
     }
 
     .button {
       button {
-        width: 75%;
-        font-size: 0.8rem;
-        padding-bottom: 0.5em;
+        width: 90%;
+        font-size: 0.7rem;
+        padding-bottom: 0.2em;
       }
     }
 

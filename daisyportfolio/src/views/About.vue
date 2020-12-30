@@ -368,7 +368,7 @@ h1 {
   h1 {
     width: 10%;
     margin: 1em 0 1em 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   #concept-container {
@@ -380,20 +380,20 @@ h1 {
       width: 80%;
 
       p {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
     }
   }
 
   #profile {
     width: 70%;
-    min-height: 30vh;
+    min-height: 50vh;
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
 
     #bio {
       #portrait {
-        width: 70%;
+        width: 85%;
         margin-top: 6em;
 
         img {
@@ -403,7 +403,7 @@ h1 {
       }
 
       button {
-        width: 70%;
+        width: 80%;
         margin-top: 2em;
         font-size: 1.5rem;
       }
@@ -412,18 +412,25 @@ h1 {
     #details {
       width: 100%;
       align-items: start;
-      margin-top: 6em;
+      margin-top: 4em;
 
       h3 {
+        width: 100%;
         font-size: 1.5rem;
         padding-top: 2em;
-        line-height: 1.5em;
+        line-height: 1.2em;
+        border-top: none;
       }
 
       p {
-        font-size: 1.5rem;
+        width: 100%;
+        font-size: 1rem;
         padding-bottom: 2em;
-        line-height: 1.5em;
+        line-height: 1.2em;
+      }
+
+      #text {
+        border-bottom: none;
       }
     }
   }

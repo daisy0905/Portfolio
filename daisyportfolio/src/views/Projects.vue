@@ -210,13 +210,13 @@ export default {
     align-content: start;
 
     h1 {
-      width: 15%;
+      width: 20%;
       margin: 1em 0 1em 0;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 1em;
       line-height: 2em;
       width: 100%;
@@ -225,7 +225,7 @@ export default {
     #category {
       margin-top: 2em;
       h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
   }

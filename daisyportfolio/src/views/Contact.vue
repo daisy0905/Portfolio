@@ -239,32 +239,32 @@ export default {
     min-height: 87vh;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     #container {
       width: 70%;
       min-height: 70vh;
       grid-template-columns: 1.5fr 1fr;
-      padding-top: 5em;
+      padding-top: 2em;
     }
 
     #contact {
-      width: 90%;
-      height: 40vh;
+      width: 100%;
+      height: 45vh;
 
       .item {
         justify-items: left;
         grid-template-columns: 20% 80%;
-        margin-left: 10em;
+        margin-left: 5em;
 
         img {
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
         }
 
         h4 {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           text-align: left;
         }
       }
@@ -277,10 +277,9 @@ export default {
 
     button {
       width: 100%;
-      font-size: 1.5rem;
+      font-size: 1rem;
       margin-bottom: 2em;
       padding: 0.5em;
-      letter-spacing: 0.2em;
       line-height: 1.5em;
     }
   }

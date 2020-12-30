@@ -1,34 +1,22 @@
 <template>
   <div id="home">
     <h1>Hello, I’m <span>Daisy Tong</span></h1>
-    <h1>I’m a Junior Full-Stack Web Developer</h1>
+    <h1>I’m a Full-Stack Web Developer</h1>
     <h2 @click="goToProjects">VIEW MY PROJECTS</h2>
     <img @click="goToAbout" src="../assets/enter_icon.png" alt="enter icon" />
   </div>
 </template>
 
 <script>
-import cookies from "vue-cookies";
 export default {
   methods: {
     goToProjects: function () {
-      cookies.set("currentPage", 2);
-      this.$store.commit("changePage", 2);
-      console.log(this.isActive);
       this.$router.push("/projects");
     },
     goToAbout: function () {
-      cookies.set("currentPage", 1);
-      this.$store.commit("changePage", 1);
-      console.log(this.isActive);
       this.$router.push("/about");
     },
-  },
-  computed: {
-    isActive() {
-      return this.$store.getters.pageGet;
-    },
-  },
+  }
 };
 </script>
 
@@ -103,6 +91,7 @@ export default {
 
 @media only screen and (min-width: 1240px) {
   #home {
+    padding: 15em 0 15em 0;
 
     h1 {
       letter-spacing: 0.3em;
@@ -110,6 +99,7 @@ export default {
 
     h2 {
       width: 30%;
+      font-size: 1.2rem;
       letter-spacing: 0.3em;
     }
   }
