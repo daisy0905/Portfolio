@@ -59,19 +59,19 @@
             career to figure out where I belong in the crazy world we work in.
           </h3>
           <p>
-            I have a real passion for development and using my design
-            experience. I leverage my knowledge of typographic, relationships
+            I have a real passion for utilizing my design background for web
+            development. I leverage my knowledge of typographic, relationships
             and design patterns to create aesthetically pleasing but also very
             viable digital experiences. I find it incredibly rewarding to write
-            not only very clean code but to witness and be apart of the solution
-            bringing a design into development.
+            not only very clean code but also to being engaged in delivering
+            highly polished design into development.
           </p>
           <p id="text">
-            I have a great design sensibility for graphics, style and user
-            interface heuristics with deep knowledge of various programming
-            languages; and am able to be proficient with graphic design software
-            and familiar with responsive web design, SEO and user-friendly web
-            application.
+            I have a great design sensibility for color, flow, typography,
+            balance and proportion, space, interactive design and user interface
+            heuristics; I am able to use my proficient software skills and web
+            technology to create visual appealing but also very viable digital
+            designs.
           </p>
         </div>
       </div>
@@ -416,7 +416,7 @@ h1 {
 
       h3 {
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding-top: 2em;
         line-height: 1.2em;
         border-top: none;

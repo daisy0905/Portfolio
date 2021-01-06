@@ -5,13 +5,9 @@
     <div id="title">
       <h1>PROJECTS</h1>
       <p>
-        With the design background, I have mastered series of professional
-        skills including rational and logical thinking and innovative and
-        analytical problem-solving ability; strong software and web technology
-        skills, all of which are indispensable to ensure success of projectrs.
-        It is the in-depth research, effective communication with clients,
-        creative design process and comprehensive thought from conceptualization
-        towards execution that serve me well when doing multi-displinary fields.
+        With over 6 years of multi-disciplinary design background, I have mastered series of professional
+        skills including innovative and analytical problem-solving ability, effective communication and collaboration skill, strong software and web technology
+        skills, all of which are indispensable to ensure success of projects.
       </p>
       <p>
         My portfolio collects 3 main course projects completed during Full-Stack

@@ -136,7 +136,7 @@ export default new Vuex.Store({
           "Thinking with diagram is essential for problem solving in design principles.",
         language: "Photoshop, Illustrator, Indesign, AutoCAD, Sketchup",
         description:
-          "The '3D' diagrams clearly illustrate how sustainable design principles are incorporated into site and building environment as architecture grows step by step.",
+          "The '3D' Sketchup rendering and Illustrator diagrams clearly illustrate how sustainable design principles are incorporated into site and building environment and what the innovative model with the multi-functional integration under high FAR is.",
         website: "",
         github_front: "",
         github_back: "",
@@ -164,7 +164,7 @@ export default new Vuex.Store({
         language:
           "Photoshop, Illustrator, Indesign, AutoCAD, Sketchup, RevitArchitecture",
         description:
-          "The images, typography, space, layout and color are carefully considered and designed to create interfaces that optimize user experience and drive conversion.",
+          "The images, typography, space, layout and color are carefully considered and designed to create interfaces that optimize user experience and drive conversation.",
         website: "",
         github_front: "",
         github_back: "",
