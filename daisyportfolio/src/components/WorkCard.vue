@@ -115,7 +115,14 @@ export default {
     opacity: 0.9;
     box-shadow: 5px 5px 7px grey;
     top: 0vh;
-    transition: all 0.25s ease-in-out;
+    // transition: all 0.25s ease-in-out;
+  }
+
+  &:hover h2,
+  &:hover h3,
+  &:hover button {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -128,6 +135,8 @@ export default {
   row-gap: 0;
   padding: 0;
   margin-top: 0;
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
 
   img {
     width: 100%;
@@ -157,12 +166,19 @@ export default {
     width: 90%;
     padding: 0;
     font-size: 1.2rem;
+    transform: scale(0);
+    color: #333;
+    transition: all 0.5s linear;
+    opacity: 0;
   }
 
   .purpose {
     width: 80%;
     font-size: 0.8rem;
     color: black;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
   }
 
   h3 {
@@ -170,6 +186,9 @@ export default {
     font-size: 0.8rem;
     margin: 0;
     color: #99582aff;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
   }
 
   button {
@@ -178,6 +197,9 @@ export default {
     color: black;
     border: 2px solid red;
     font-weight: bold;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
   }
 }
 
@@ -361,6 +383,11 @@ img {
 @media only screen and (min-width: 1024px) {
   .work-card {
     height: 60vh;
+
+    &:hover > .image {
+      transform: scale(2);
+      opacity: 0;
+    }
   }
 
   .description {
