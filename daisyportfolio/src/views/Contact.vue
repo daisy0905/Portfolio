@@ -11,11 +11,11 @@
             <h4>dtong0905@gmail.com</h4>
           </div>
           <div class="item">
-            <img src="../assets/github.png" alt="github icon" />
+            <img src="../assets/github_2.png" alt="github icon" />
             <h4>https://github.com/daisy0905</h4>
           </div>
           <div class="item">
-            <img src="../assets/linkedin.png" alt="linkedin icon" />
+            <img src="../assets/linkedin_2.png" alt="linkedin icon" />
             <h4>www.linkedin.com/in/daisy-tong</h4>
           </div>
           <div class="item">
@@ -80,10 +80,10 @@ export default {
   align-items: start;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background: url(../assets/project_background.jpg);
+  background: url(../assets/home_background.jpg);
   background-size: cover;
   background-position: center;
-  opacity: 0.6;
+  opacity: 0.8;
 
   h1 {
     width: 80%;
@@ -105,8 +105,8 @@ export default {
   }
 
   #contact {
-    min-height: 30vh;
-    width: 60%;
+    min-height: 25vh;
+    width: 65%;
     display: grid;
     justify-items: center;
     align-items: start;
@@ -136,7 +136,7 @@ export default {
   }
 
   #button {
-    width: 60%;
+    width: 65%;
     min-height: 10vh;
     display: grid;
     justify-items: center;
@@ -150,6 +150,16 @@ export default {
     color: black;
     font-weight: bold;
     box-shadow: 1px 1px 1px black;
+
+    &:hover {
+      background-color: #bb9457ff;
+    }
+
+    &:active {
+      background-color: #6f1d1bff;
+      border: 1px solid white;
+      color: white;
+    }
   }
 }
 
@@ -246,7 +256,7 @@ export default {
       width: 70%;
       min-height: 70vh;
       grid-template-columns: 1.5fr 1fr;
-      padding-top: 2em;
+      padding-top: 1em;
     }
 
     #contact {

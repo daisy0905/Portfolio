@@ -91,6 +91,12 @@ export default {
 
     &:hover {
       cursor: pointer;
+      border-bottom: 2px solid #bb9457ff;
+    }
+
+    &:active {
+      color: #bb9457ff;
+      border-bottom: 2px solid #6f1d1bff;
     }
   }
 }

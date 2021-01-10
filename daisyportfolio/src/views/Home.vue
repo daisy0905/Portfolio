@@ -6,13 +6,16 @@
 
       <header class="navbar-fixed">
         <div></div>
-        <img @click="
-              redirect(
-                'https://www.linkedin.com/in/daisy-tong/'
-              )" src="../assets/linkedin.png" alt="Linkedin logo" />
-        <img @click="redirect(
-                'https://github.com/daisy0905'
-              )" src="../assets/github.png" alt="GitHub logo" />
+        <img
+          @click="redirect('https://www.linkedin.com/in/daisy-tong/')"
+          src="../assets/linkedin.png"
+          alt="Linkedin logo"
+        />
+        <img
+          @click="redirect('https://github.com/daisy0905')"
+          src="../assets/github.png"
+          alt="GitHub logo"
+        />
       </header>
 
       <main class="body">
@@ -51,7 +54,7 @@ export default {
     },
     redirect: function (link, target = "_blank") {
       window.open(link, target);
-    }
+    },
   },
 };
 </script>
@@ -59,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 #body {
   display: flex;
-  // height: 100vh;
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -232,9 +235,8 @@ export default {
 }
 
 .container-1 {
-  height: 15vh;
-  animation: fadeInDown;
-  animation-duration: 2s;
+  // height: 15vh;
+  animation: fadeIn 4s ease-in-out;
 
   h2 {
     width: 100%;
@@ -263,10 +265,15 @@ export default {
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
+  70% {
+    opacity: 0.4;
+  }
+
   100% {
     opacity: 1;
   }
@@ -293,7 +300,7 @@ export default {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px #bb9457ff;
+  text-shadow: 1px 1px 1px black;
 
   span {
     display: inline-block;
@@ -309,14 +316,10 @@ export default {
   &:after {
     content: "";
     position: absolute;
-
     display: inline-block;
     width: 190px;
     height: 42px;
-
     border: 4px solid #bb9457ff;
-    // border-radius: 50px;
-
     z-index: 20;
   }
 
@@ -383,6 +386,232 @@ export default {
     font-size: 0.8rem;
     color: red;
     font-weight: normal;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .welcome .splash {
+    border-radius: 70%;
+  }
+
+  .welcome #welcome {
+    border-radius: 70%;
+  }
+
+  /* moveIn */
+
+  @keyframes init {
+    100% {
+      width: 80px;
+      height: 80px;
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes puff {
+    100% {
+      top: 50%;
+      height: 100%;
+      padding: 0px 100%;
+    }
+  }
+
+  @keyframes borderRadius {
+    100% {
+      border-radius: 0px;
+    }
+  }
+
+  @keyframes moveDown {
+    100% {
+      top: 100%;
+    }
+  }
+
+  @keyframes moveUp {
+    50% {
+      top: 40%;
+    }
+  }
+
+  @keyframes materia {
+    100% {
+      background: black;
+      width: 100%;
+      height: 64px;
+      border-radius: 0px;
+      top: 26px;
+    }
+  }
+
+  @keyframes moveIn {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .navbar-fixed {
+    grid-template-columns: 70% 15% 15%;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  .body {
+    padding-top: 15em;
+  }
+
+  .container-1 {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      letter-spacing: 0.4em;
+      text-shadow: 3px 3px 2px black;
+    }
+
+    p {
+      font-size: 2rem;
+      margin: 1em 0 1em 0;
+    }
+  }
+
+  .btn {
+    width: 300px;
+    height: 75px;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px black;
+
+    span {
+      top: 30px;
+    }
+
+    &:before,
+    &:after {
+      width: 300px;
+      height: 50px;
+    }
+
+    &:after {
+      top: -10;
+    }
+  }
+  .enter-img {
+    width: 60px;
+    height: 60px;
+    right: 7vw;
+  }
+
+  #copyright {
+    h4 {
+      font-size: 1rem;
+    }
+
+    #text {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar-fixed {
+    grid-template-columns: 80% 10% 10%;
+    height: 10vh;
+    padding-top: 0.5em;
+
+    img {
+      width: 30%;
+    }
+  }
+
+  .body {
+    padding-top: 6em;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: url(../assets/home_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: none;
+  }
+
+  .container-1 {
+    display: grid;
+    justify-items: left;
+    width: 100%;
+    padding-left: 6em;
+
+    h2 {
+      font-size: 1.2rem;
+      text-align: left;
+      letter-spacing: 0.4em;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.6em;
+      text-shadow: 5px 5px 2px black;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: left;
+      letter-spacing: 0.4em;
+    }
+  }
+
+  .btn {
+    width: 300px;
+    height: 85px;
+    font-size: 1.5rem;
+
+    span {
+      top: 35px;
+    }
+
+    &:before,
+    &:after {
+      width: 300px;
+      height: 60px;
+    }
+
+    &:after {
+      top: -10;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:active {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .enter-img {
+    width: 60px;
+    height: 60px;
+    right: 5vw;
+
+    &:hover, &:active {
+      cursor: pointer;
+    }
+  }
+
+  #copyright {
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    #text {
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+    }
   }
 }
 </style>
