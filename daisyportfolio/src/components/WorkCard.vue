@@ -2,6 +2,7 @@
   <div class="work-card">
     <div class="image">
       <img :src="work.cover_image" alt="the cover image of project" />
+      <!-- <button></button> -->
     </div>
     <div class="description">
       <h2>{{ work.name }}</h2>
@@ -115,7 +116,7 @@ export default {
     opacity: 0.9;
     box-shadow: 5px 5px 7px grey;
     top: 0vh;
-    // transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   &:hover h2,

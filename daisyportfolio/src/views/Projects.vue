@@ -98,7 +98,7 @@ export default {
 
 #title {
   width: 100%;
-  min-height: 65vh;
+  min-height: 55vh;
   display: grid;
   justify-items: center;
   align-items: start;
@@ -156,7 +156,6 @@ export default {
 
 @media only screen and (min-width: 600px) {
   #title {
-    min-height: 60vh;
 
     h1 {
       width: 25%;

@@ -88,6 +88,10 @@ export default {
     font-size: 1.2rem;
     margin-left: 2em;
     color: black;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 </style>
