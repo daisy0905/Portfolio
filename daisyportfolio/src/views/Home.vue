@@ -6,8 +6,13 @@
 
       <header class="navbar-fixed">
         <div></div>
-        <img src="../assets/linkedin.png" alt="Linkedin logo" />
-        <img src="../assets/github.png" alt="GitHub logo" />
+        <img @click="
+              redirect(
+                'https://www.linkedin.com/in/daisy-tong/'
+              )" src="../assets/linkedin.png" alt="Linkedin logo" />
+        <img @click="redirect(
+                'https://github.com/daisy0905'
+              )" src="../assets/github.png" alt="GitHub logo" />
       </header>
 
       <main class="body">
@@ -44,6 +49,9 @@ export default {
     goToAbout: function () {
       this.$router.push("/about");
     },
+    redirect: function (link, target = "_blank") {
+      window.open(link, target);
+    }
   },
 };
 </script>
@@ -57,7 +65,7 @@ export default {
 
 .welcome {
   background-color: #657786;
-  background-image: linear-gradient(#657786, #e1e8ed);
+  background-image: linear-gradient(black, #657786);
   min-height: 100vh;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -224,7 +232,7 @@ export default {
 }
 
 .container-1 {
-  height: 20vh;
+  height: 15vh;
   animation: fadeInDown;
   animation-duration: 2s;
 
@@ -233,12 +241,13 @@ export default {
     font-size: 1rem;
     margin-bottom: 1em;
     font-weight: normal;
+    color: white;
     // text-shadow: 2px 2px 1px white;
   }
 
   h1 {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     letter-spacing: 0.2em;
     text-shadow: 2px 2px 1px black;
     color: #bb9457ff;
@@ -249,6 +258,7 @@ export default {
     width: 100%;
     font-size: 1.3rem;
     margin: 1em 0 1em 0;
+    color: white;
     // text-shadow: 2px 2px 1px white;
   }
 }
@@ -268,7 +278,7 @@ export default {
   display: flex;
 
   -webkit-flex-align: center;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -283,7 +293,7 @@ export default {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px #6f1d1bff;
+  text-shadow: 1px 1px 1px #bb9457ff;
 
   span {
     display: inline-block;
@@ -304,8 +314,8 @@ export default {
     width: 190px;
     height: 42px;
 
-    border: 4px solid #6f1d1bff;
-    border-radius: 50px;
+    border: 4px solid #bb9457ff;
+    // border-radius: 50px;
 
     z-index: 20;
   }
@@ -352,7 +362,7 @@ export default {
   height: 40px;
   position: fixed;
   bottom: 10vh;
-  right: 10vw;
+  right: 5vw;
 }
 
 #copyright {
