@@ -6,11 +6,11 @@
         <h4>dtong0905@gmail.com</h4>
       </div>
       <div class="item">
-        <img src="../assets/github.png" alt="github icon" />
+        <img src="../assets/github_2.png" alt="github icon" />
         <h4>https://github.com/daisy0905</h4>
       </div>
       <div class="item">
-        <img src="../assets/linkedin.png" alt="linkedin icon" />
+        <img src="../assets/linkedin_2.png" alt="linkedin icon" />
         <h4>www.linkedin.com/in/daisy-tong</h4>
       </div>
       <div class="item">
@@ -40,14 +40,14 @@ export default {
 }
 
 #contact {
-  height: 22vh;
+  min-height: 40vh;
   width: 100%;
   display: grid;
   justify-items: center;
   align-items: start;
-  grid-template-columns: 1fr 1fr;
   background-color: darkgrey;
-  padding: 1em 0 0.5em 0;
+  padding: 1.5em 0 1.5em 0;
+  margin-top: 1em;
 
   .item {
     height: 10vh;
@@ -93,7 +93,8 @@ export default {
 
 @media only screen and (min-width: 600px) {
   #contact {
-    padding-top: 1em;
+    min-height: 20vh;
+    grid-template-columns: 1fr 1fr;
 
     .item {
       img {
@@ -102,7 +103,7 @@ export default {
       }
 
       h4 {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -118,7 +119,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1024px) {
   #footer {
     min-height: 20vh;
   }
@@ -143,11 +144,11 @@ export default {
 
   #copyright {
     h4 {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     #text {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 }

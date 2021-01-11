@@ -1,14 +1,32 @@
 <template>
   <div class="work-card">
-    <div class="image">
-      <img :src="work.cover_image" alt="the cover image of project" />
-      <!-- <button></button> -->
+    <div class="mobile-tablet">
+      <div class="image">
+        <img :src="work.cover_image" alt="the cover image of project" />
+        <div class="wrap">
+          <button @click="showDescription" class="button">DETAILS</button>
+        </div>
+      </div>
+      <div class="description" v-if="show == true">
+        <h2>{{ work.name }}</h2>
+        <h3 class="purpose">{{ work.purpose }}</h3>
+        <h3>{{ work.language }}</h3>
+        <h4 @click="open">LEARN MORE</h4>
+        <div @click="closeDescription" class="close icon">
+          <img src="../assets/close-icon.png" alt="close icon" />
+        </div>
+      </div>
     </div>
-    <div class="description">
-      <h2>{{ work.name }}</h2>
-      <h3 class="purpose">{{ work.purpose }}</h3>
-      <h3>{{ work.language }}</h3>
-      <button @click="open">LEARN MORE</button>
+    <div class="desktop">
+      <div class="image">
+        <img :src="work.cover_image" alt="the cover image of project" />
+      </div>
+      <div class="description">
+        <h2>{{ work.name }}</h2>
+        <h3 class="purpose">{{ work.purpose }}</h3>
+        <h3>{{ work.language }}</h3>
+        <h4 @click="open">LEARN MORE</h4>
+      </div>
     </div>
     <div class="details" v-if="display == true">
       <div class="slider">
@@ -22,14 +40,14 @@
       </div>
       <div class="content">
         <p>{{ work.description }}</p>
-        <div class="button">
-          <button v-if="url != ''" @click="redirect(url)">VIEW SITE</button>
-          <button v-if="github_front != ''" @click="redirect(github_front)">
+        <div class="details-button">
+          <h4 v-if="url != ''" @click="redirect(url)">VIEW SITE</h4>
+          <h4 v-if="github_front != ''" @click="redirect(github_front)">
             GITHUB FRONT-END
-          </button>
-          <button v-if="github_back != ''" @click="redirect(github_back)">
+          </h4>
+          <h4 v-if="github_back != ''" @click="redirect(github_back)">
             GITHUB BACK-END
-          </button>
+          </h4>
         </div>
         <div @click="open" class="close icon">
           <img src="../assets/close-icon.png" alt="close icon" />
@@ -58,6 +76,7 @@ export default {
       url: this.work.website,
       github_front: this.work.github_front,
       github_back: this.work.github_back,
+      show: false,
     };
   },
   mounted: function () {
@@ -84,6 +103,12 @@ export default {
     redirect: function (link, target = "_blank") {
       window.open(link, target);
     },
+    showDescription: function () {
+      this.show = !this.show;
+    },
+    closeDescription: function () {
+      this.show = !this.show;
+    },
   },
   computed: {
     currentImg: function () {
@@ -107,24 +132,14 @@ export default {
   position: relative;
   background-color: darkgrey;
   padding: 0.5em 0 0 0;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:hover > .description {
-    opacity: 0.9;
-    box-shadow: 5px 5px 7px grey;
-    top: 0vh;
-    transition: all 0.25s ease-in-out;
-  }
-
-  &:hover h2,
-  &:hover h3,
-  &:hover button {
-    transform: scale(1);
-    opacity: 1;
-  }
+.mobile-tablet {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .image {
@@ -136,8 +151,6 @@ export default {
   row-gap: 0;
   padding: 0;
   margin-top: 0;
-  transform: scaleY(1);
-  transition: all 0.7s ease-in-out;
 
   img {
     width: 100%;
@@ -148,15 +161,106 @@ export default {
   }
 }
 
+.wrap {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 18vh;
+  width: 25vw;
+}
+
+.button {
+  min-width: 100px;
+  min-height: 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: white;
+  background: #bb9457ff;
+  background: linear-gradient(90deg, #cbb89a 0%, #bb9457ff 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 8px 8px 15px black;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  z-index: 50;
+  opacity: 0.8;
+}
+
+button::before {
+  content: "";
+  border-radius: 1000px;
+  min-width: 100px;
+  min-height: 30px;
+  border: 3px solid #5d3f11;
+  box-shadow: 0 0 60px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 3px solid #bb9457ff;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
 .description {
   width: 100%;
   height: 40vh;
   display: grid;
   justify-items: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
-  z-index: 40;
+  z-index: 200;
   background-color: white;
   box-shadow: 0px 0px 0px grey;
   top: 0;
@@ -167,41 +271,66 @@ export default {
     width: 90%;
     padding: 0;
     font-size: 1.2rem;
-    transform: scale(0);
     color: #333;
-    transition: all 0.5s linear;
-    opacity: 0;
   }
 
   .purpose {
     width: 80%;
     font-size: 0.8rem;
     color: black;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s linear;
   }
 
   h3 {
-    width: 60%;
+    width: 80%;
     font-size: 0.8rem;
     margin: 0;
     color: #99582aff;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s linear;
   }
 
-  button {
+  h4 {
     width: 40vw;
     padding: 0.5em;
     color: black;
     border: 2px solid red;
     font-weight: bold;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s linear;
+
+    &:hover {
+      background-color: grey;
+      border: 2px solid #6f1d1bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #6f1d1bff;
+      border: 1px solid white;
+      color: white;
+      cursor: pointer;
+    }
   }
+
+  .icon {
+    width: 100%;
+    height: 3vh;
+    display: grid;
+    justify-items: right;
+    align-items: center;
+    margin-right: 1em;
+    position: absolute;
+    top: 1vh;
+    left: -1vw;
+
+    img {
+      width: 15px;
+      height: 15px;
+      align-content: right;
+      cursor: pointer;
+    }
+  }
+}
+
+.desktop {
+  display: none;
 }
 
 .details {
@@ -214,7 +343,7 @@ export default {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 500;
   background-color: white;
 }
 
@@ -263,7 +392,7 @@ img {
     text-align: justify;
   }
 
-  .button {
+  .details-button {
     width: 100%;
     height: 5vh;
     display: grid;
@@ -271,13 +400,27 @@ img {
     align-items: start;
     grid-template-columns: 1fr 1fr 1fr;
 
-    button {
+    h4 {
       width: 90%;
       padding: 0.5em;
       color: black;
-      border: 2px solid red;
+      border: 2px solid #6f1d1bff;
       font-weight: bold;
       font-size: 0.6rem;
+
+      &:hover {
+        background-color: grey;
+        border: 2px solid #6f1d1bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: #6f1d1bff;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 
@@ -296,6 +439,7 @@ img {
       width: 15px;
       height: 15px;
       align-content: right;
+      cursor: pointer;
     }
   }
 }
@@ -305,28 +449,37 @@ img {
     height: 50vh;
   }
 
-  .image {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    row-gap: 0;
-    padding: 0;
-    margin-top: 0;
+  .button {
+    min-width: 200px;
+    min-height: 60px;
+    font-size: 1.5rem;
+  }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      padding-top: 0;
-      border: 3px solid white;
+  button::before {
+    min-width: 200px;
+    min-height: 60px;
+  }
+
+  button::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+
+  @keyframes ring {
+    0% {
+      width: 60px;
+      height: 60px;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
     }
   }
 
   .description {
     height: 50vh;
-    padding: 3em 0 3em 0;
 
     h2 {
       font-size: 2rem;
@@ -334,14 +487,13 @@ img {
 
     .purpose {
       font-size: 1.5rem;
-      line-height: 1.5em;
     }
 
     h3 {
       font-size: 1.5rem;
     }
 
-    button {
+    h4 {
       margin-top: 2em;
       width: 30vw;
       font-size: 1.5rem;
@@ -354,6 +506,7 @@ img {
 
   img {
     height: 65vh;
+    object-fit: cover;
   }
 
   .content {
@@ -365,8 +518,8 @@ img {
       padding-bottom: 0.5em;
     }
 
-    .button {
-      button {
+    .details-button {
+      h4 {
         width: 70%;
         font-size: 1rem;
       }
@@ -383,36 +536,92 @@ img {
 
 @media only screen and (min-width: 1024px) {
   .work-card {
-    height: 60vh;
+    height: 40vh;
 
-    &:hover > .image {
+    .desktop {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        row-gap: 0;
+        padding: 0;
+        margin-top: 0;
+        transform: scaleY(1);
+        transition: all 0.7s ease-in-out;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          padding-top: 0;
+          border: 3px solid white;
+        }
+      }
+    }
+
+    &:hover .description {
+      opacity: 0.9;
+      box-shadow: 5px 5px 7px grey;
+      top: 0vh;
+      transition: all 0.25s ease-in-out;
+      cursor: pointer;
+    }
+
+    &:hover h2,
+    &:hover h3,
+    &:hover button {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    &:hover .image {
       transform: scale(2);
       opacity: 0;
     }
   }
 
   .description {
-    height: 60vh;
-    padding: 3em 0 3em 0;
+    height: 100%;
+    opacity: 0;
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      transform: scale(0);
+      transition: all 0.5s linear;
+      opacity: 0;
     }
 
     .purpose {
       font-size: 1rem;
-      line-height: 1.5em;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.5s linear;
     }
 
     h3 {
-      width: 80%;
       font-size: 1rem;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.5s linear;
     }
 
-    button {
-      width: 30%;
-      font-size: 0.8rem;
+    h4 {
+      width: 20vw;
+      font-size: 1.2rem;
     }
+  }
+
+  .mobile-tablet {
+    display: none;
   }
 
   .details {
@@ -425,7 +634,7 @@ img {
     position: fixed;
     top: 0;
     right: 30vw;
-    z-index: 100;
+    z-index: 500;
     background-color: white;
     box-shadow: 5px 5px 5px darkgrey;
   }
@@ -433,23 +642,6 @@ img {
   .slider {
     width: 100%;
     height: 55vh;
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 0.9s ease;
-    overflow: hidden;
-    visibility: visible;
-    width: 100%;
-    position: absolute;
-    opacity: 1;
-  }
-
-  .fade-enter,
-  .fade-leave-to {
-    visibility: hidden;
-    width: 100%;
-    opacity: 0;
   }
 
   img {
@@ -474,8 +666,8 @@ img {
       padding-bottom: 0.5em;
     }
 
-    .button {
-      button {
+    .details-button {
+      h4 {
         width: 90%;
         font-size: 0.7rem;
         padding-bottom: 0.2em;

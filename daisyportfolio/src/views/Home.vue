@@ -222,6 +222,10 @@ export default {
 
   img {
     width: 40%;
+
+    &:hover, &:active {
+      cursor: pointer;
+    }
   }
 }
 
@@ -461,6 +465,14 @@ export default {
 
   .body {
     padding-top: 15em;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: url(../assets/home_background_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: none;
+    opacity: 1;
   }
 
   .container-1 {
@@ -530,24 +542,17 @@ export default {
 
   .body {
     padding-top: 6em;
-    height: 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     background: url(../assets/home_background.jpg);
     background-size: cover;
     background-position: center;
-    background-color: none;
   }
 
   .container-1 {
     display: grid;
-    justify-items: left;
     width: 100%;
-    padding-left: 6em;
 
     h2 {
       font-size: 1.2rem;
-      text-align: left;
       letter-spacing: 0.4em;
     }
 
@@ -555,12 +560,10 @@ export default {
       font-size: 2.5rem;
       letter-spacing: 0.6em;
       text-shadow: 5px 5px 2px black;
-      text-align: left;
     }
 
     p {
       font-size: 1.5rem;
-      text-align: left;
       letter-spacing: 0.4em;
     }
   }
@@ -598,7 +601,8 @@ export default {
     height: 60px;
     right: 5vw;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       cursor: pointer;
     }
   }

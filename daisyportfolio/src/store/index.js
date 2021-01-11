@@ -42,7 +42,7 @@ export default new Vuex.Store({
         purpose: "A Mobile Social Media Application Design",
         language: "Flask Python, Restful API, Vue.js, Vuex",
         description:
-          "Built a mobile social media application whose server-side is created by Flask Python and Restful API in collaboration with database and client-side is created by Vue.js and Vuex; its features include social authorization, feed, post and comments creation, edit and delete; post and comments likes, user profile and search; focused on mobile responsive and a proper web application.",
+          "Built a CRUD responsive social media website whose server-side is created by Flask Python and RESTful API in collaboration with SQL and database and client-side is created by Vue.js and Vuex; there are more than 20 features include social authorization, feed, post and comments creation, edit and delete; post and comments likes, user profile and search; focused on mobile responsive and a proper web application.",
         website: "https://daisyfulltweeter.ml",
         github_front: "https://github.com/daisy0905/Tweeter-frontend.git",
         github_back: "https://github.com/daisy0905/Tweeter-backend.git",
@@ -68,10 +68,10 @@ export default new Vuex.Store({
         purpose: "A Fully Responsive Website Design",
         language: "Flask Python, Restful API, Vue.js, Vuex",
         description:
-          "It is an advanced full-stack web development project in the use of database, Flaks Python, Restful API and Vue.js and Vuex; created features for visitors and the artist including visitors’ reviewing artwork, submitting enquiry and ordering the artwork, and subscribing to the newsletter; the artist’s reviewing artwork inventory, uploading, updating and deleting artwork, checking artworks’ status, visitors' enquiries and contact information for follow-up; the website is fully responsive.",
+          "It is an advanced full-stack web development project in the use of database, Flaks Python, RESTful API and Vue.js and Vuex; created features for visitors and the artist including visitors’ reviewing artwork, submitting enquiry and ordering the artwork, and subscribing to the newsletter; the artist’s reviewing artwork inventory, uploading, updating and deleting artwork, checking artworks’ status, visitors' enquiries and contact information for follow-up; the website is fully responsive.",
         website: "https://artisttongkemin.ml",
-        github_front: "https://github.com/daisy0905/MVPProject-frontend.git",
-        github_back: "https://github.com/daisy0905/MVPProject-backend.git",
+        github_front: "https://github.com/daisy0905/Artistwebsite-frontend.git",
+        github_back: "https://github.com/daisy0905/Artistwebsite-backend.git",
         images: [
           {
             id: 0,

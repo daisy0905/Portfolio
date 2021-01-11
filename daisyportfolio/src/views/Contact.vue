@@ -80,7 +80,7 @@ export default {
   align-items: start;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background: url(../assets/home_background.jpg);
+  background: url(../assets/home_background_2.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0.8;
@@ -152,13 +152,17 @@ export default {
     box-shadow: 1px 1px 1px black;
 
     &:hover {
-      background-color: #bb9457ff;
+      background-color: grey;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
     }
 
     &:active {
       background-color: #6f1d1bff;
       border: 1px solid white;
       color: white;
+      cursor: pointer;
     }
   }
 }
@@ -247,6 +251,8 @@ export default {
 
   #contact-container {
     min-height: 87vh;
+    background: url(../assets/home_background.jpg);
+    background-position: right bottom;
 
     h1 {
       font-size: 2rem;

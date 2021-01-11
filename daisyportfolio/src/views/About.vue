@@ -207,12 +207,25 @@ h1 {
     }
 
     button {
-      width: 50%;
+      width: 200px;
       padding: 0.5em;
       color: black;
-      border: 2px solid red;
+      border: 2px solid #6f1d1bff;
       font-weight: bold;
       margin: 1.5em 0 2em 0;
+
+      &:hover {
+        background-color: grey;
+        color: white;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: #6f1d1bff;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 
@@ -403,7 +416,7 @@ h1 {
       }
 
       button {
-        width: 80%;
+        width: 85%;
         margin-top: 2em;
         font-size: 1.5rem;
       }

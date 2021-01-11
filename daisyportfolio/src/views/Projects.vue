@@ -5,9 +5,11 @@
     <div id="title">
       <h1>PROJECTS</h1>
       <p>
-        With over 6 years of multi-disciplinary design background, I have mastered series of professional
-        skills including innovative and analytical problem-solving ability, effective communication and collaboration skill, strong software and web technology
-        skills, all of which are indispensable to ensure success of projects.
+        With over 6 years of multi-disciplinary design background, I have
+        mastered series of professional skills including innovative and
+        analytical problem-solving ability, effective communication and
+        collaboration skill, strong software and web technology skills, all of
+        which are indispensable to ensure success of projects.
       </p>
       <p>
         My portfolio collects 3 main course projects completed during Full-Stack
@@ -132,12 +134,21 @@ export default {
     align-items: center;
 
     h3 {
-      width: 100%;
+      width: 80%;
       padding: 0;
       margin-top: 1.5em;
       font-weight: bold;
       font-size: 0.8rem;
       color: #6f1d1bff;
+
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid #6f1d1bff;
+      }
+
+      &:active {
+        border-bottom: 2px solid #bb9457ff;
+      }
     }
   }
 }
@@ -156,7 +167,6 @@ export default {
 
 @media only screen and (min-width: 600px) {
   #title {
-
     h1 {
       width: 25%;
       margin: 1em 0 1em 0;
@@ -219,7 +229,9 @@ export default {
 
     #category {
       margin-top: 2em;
+
       h3 {
+        width: 70%;
         font-size: 1.5rem;
       }
     }

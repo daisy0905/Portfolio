@@ -35,16 +35,16 @@ export default {
     return {
       display: true,
       disactive: {
-        color: "black"
+        color: "black",
       },
       active: {
         color: "#bb9457ff",
-        fontWeight: "bold"
+        fontWeight: "bold",
       },
       home: {},
       about: {},
       projects: {},
-      contact: {}
+      contact: {},
     };
   },
   methods: {
@@ -67,17 +67,17 @@ export default {
       this.$router.push("/contact");
     },
   },
-  mounted () {
-    if(this.$router.history.current.path == "/") {
-      this.home = this.active
-    } else if(this.$router.history.current.path == "/about") {
-      this.about = this.active
-    } else if(this.$router.history.current.path == "/projects") {
-      this.projects = this.active
-    } else if(this.$router.history.current.path == "/contact") {
-      this.contact = this.active
+  mounted() {
+    if (this.$router.history.current.path == "/") {
+      this.home = this.active;
+    } else if (this.$router.history.current.path == "/about") {
+      this.about = this.active;
+    } else if (this.$router.history.current.path == "/projects") {
+      this.projects = this.active;
+    } else if (this.$router.history.current.path == "/contact") {
+      this.contact = this.active;
     }
-  }
+  },
 };
 </script>
 
@@ -139,15 +139,22 @@ export default {
     font-size: 0.8rem;
     margin-left: 2em;
     color: white;
-  }
 
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid #bb9457ff;
+    }
+
+    &:active {
+      color: #bb9457ff;
+      border-bottom: 2px solid white;
+    }
+  }
 }
 
 @media only screen and (min-width: 600px) {
   #header {
-
     .icon {
-
       img {
         height: 40px;
       }
@@ -160,12 +167,10 @@ export default {
   }
 
   #nav-bar {
-
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-left: 3em;
     }
-
   }
 }
 </style>
