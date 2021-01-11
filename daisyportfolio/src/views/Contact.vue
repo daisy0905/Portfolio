@@ -8,23 +8,35 @@
         <div id="contact">
           <div class="item">
             <img src="../assets/email-icon.png" alt="email icon" />
-            <h4>dtong0905@gmail.com</h4>
+            <a href="mailto:dtong0905@gmail.com">dtong0905@gmail.com</a>
           </div>
           <div class="item">
             <img src="../assets/github_2.png" alt="github icon" />
-            <h4>https://github.com/daisy0905</h4>
+            <h4 @click="redirect('https://github.com/daisy0905')">
+              https://github.com/daisy0905
+            </h4>
           </div>
           <div class="item">
             <img src="../assets/linkedin_2.png" alt="linkedin icon" />
-            <h4>www.linkedin.com/in/daisy-tong</h4>
+            <h4 @click="redirect('https://www.linkedin.com/in/daisy-tong/')">
+              www.linkedin.com/in/daisy-tong
+            </h4>
           </div>
           <div class="item">
             <img src="../assets/phone-icon.png" alt="phone icon" />
-            <h4>403.926.3495</h4>
+            <a href="tel:4039262495">403.926.2495</a>
           </div>
         </div>
         <div id="button">
-          <button @click="redirect('https://www.dropbox.com/s/jkk1xgitxhs518k/Resume_Daisy%20Tong.pdf?dl=0')">Download Resume</button>
+          <button
+            @click="
+              redirect(
+                'https://www.dropbox.com/s/jkk1xgitxhs518k/Resume_Daisy%20Tong.pdf?dl=0'
+              )
+            "
+          >
+            Download Resume
+          </button>
           <button
             @click="redirect('https://form.123formbuilder.com/5762072/form')"
           >
@@ -133,6 +145,20 @@ export default {
         font-weight: bold;
         font-size: 0.8rem;
         margin: 0.5em;
+        color: black;
+
+        &:hover,
+        &:active {
+          cursor: pointer;
+        }
+      }
+
+      a {
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin: 0.5em;
+        text-decoration: none;
+        color: black;
       }
     }
   }
@@ -214,6 +240,10 @@ export default {
         h4 {
           font-size: 1.2rem;
         }
+
+        a {
+          font-size: 1.2rem;
+        }
       }
     }
 
@@ -282,7 +312,10 @@ export default {
         }
 
         h4 {
-          font-size: 1.2rem;
+          text-align: left;
+        }
+
+        a {
           text-align: left;
         }
       }
