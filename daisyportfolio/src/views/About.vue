@@ -46,7 +46,7 @@
           <button
             @click="
               redirect(
-                'https://www.dropbox.com/s/kr389xugehy8yrl/Resume_Daisy%20Tong.pdf?dl=0'
+                'https://www.dropbox.com/s/jkk1xgitxhs518k/Resume_Daisy%20Tong.pdf?dl=0'
               )
             "
           >

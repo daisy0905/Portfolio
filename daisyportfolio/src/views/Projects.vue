@@ -126,15 +126,15 @@ export default {
   }
 
   #category {
-    width: 100%;
+    width: 90%;
     height: 5vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.8fr 1.1fr;
     justify-items: center;
     align-items: center;
 
     h3 {
-      width: 80%;
+      width: 100%;
       padding: 0;
       margin-top: 1.5em;
       font-weight: bold;
