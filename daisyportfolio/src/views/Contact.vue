@@ -94,6 +94,7 @@ export default {
     color: white;
     font-weight: bold;
     letter-spacing: 0.2em;
+    text-shadow: 3px 3px 2px black;
   }
 
   #container {
@@ -113,6 +114,7 @@ export default {
     padding: 1em 0 1em 0;
     background-color: white;
     box-shadow: 3px 3px 2px black;
+    opacity: 0.8;
 
     .item {
       height: 10vh;

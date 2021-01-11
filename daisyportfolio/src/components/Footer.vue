@@ -126,8 +126,9 @@ export default {
 
   #contact {
     align-items: center;
-    padding: 1em 0 1em 0;
+    padding: 1em 0 2em 0;
     grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
 
     .item {
       height: 0;

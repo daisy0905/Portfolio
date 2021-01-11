@@ -77,10 +77,7 @@
       </div>
       <div id="skills">
         <h2>SOFTWARE SKILLS & WEB TECHNOLOGY</h2>
-        <img
-          src="../assets/Skill_diagram.png"
-          alt="The diagram shows skillsets"
-        />
+        <skill-sets id="skillsets"></skill-sets>
       </div>
     </div>
     <footer-bar></footer-bar>
@@ -91,11 +88,13 @@
 import NavigationBar from "../components/NavigationBar.vue";
 import FooterBar from "../components/Footer.vue";
 import NavDesktop from "../components/NavDesktop.vue";
+import SkillSets from "../components/SkillSets.vue";
 export default {
   components: {
     NavigationBar,
     FooterBar,
     NavDesktop,
+    SkillSets,
   },
   methods: {
     redirect: function (link, target = "_blank") {
@@ -261,8 +260,7 @@ h1 {
 }
 
 #skills {
-  width: 80%;
-  min-height: 40vh;
+  min-height: 100vh;
   display: grid;
   justify-items: center;
   align-items: start;
@@ -280,8 +278,11 @@ h1 {
     margin-bottom: 1em;
   }
 
-  img {
-    width: 100%;
+  #skillsets {
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
   }
 }
 
@@ -450,14 +451,15 @@ h1 {
 
   #skills {
     margin-top: 3em;
+    width: 100%;
 
     h2 {
       width: 55%;
       font-size: 2rem;
     }
 
-    img {
-      width: 70%;
+    #skillsets {
+      width: 80%;
     }
   }
 }

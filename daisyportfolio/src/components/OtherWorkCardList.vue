@@ -17,9 +17,9 @@ export default {
     WorkCard,
   },
   computed: {
-    otherworks: function() {
-      return this.$store.state.otherworks 
-    }
+    otherworks: function () {
+      return this.$store.state.otherworks;
+    },
   },
 };
 </script>
@@ -32,5 +32,22 @@ export default {
   justify-items: center;
   align-items: center;
   row-gap: 1vh;
+}
+
+@media only screen and (min-width: 600px) {
+  .works {
+    min-height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .works {
+    width: 100%;
+    min-height: 40vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    row-gap: 0vh;
+  }
 }
 </style>
