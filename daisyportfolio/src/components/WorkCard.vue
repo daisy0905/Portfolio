@@ -398,7 +398,7 @@ img {
     display: grid;
     justify-items: center;
     align-items: start;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
 
     h4 {
       width: 90%;
