@@ -178,15 +178,15 @@ export default new Vuex.Store({
         images: [
           {
             id: 0,
-            image: require("@/assets/Other_1.png"),
+            image: require("@/assets/branding_1.png"),
           },
           {
             id: 1,
-            image: require("@/assets/Other_2.png"),
+            image: require("@/assets/branding_2.png"),
           },
           {
             id: 2,
-            image: require("@/assets/Other_3.png"),
+            image: require("@/assets/branding_3.png"),
           }
         ],
       },
