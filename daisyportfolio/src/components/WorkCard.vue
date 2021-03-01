@@ -41,12 +41,12 @@
       <div class="content">
         <p>{{ work.description }}</p>
         <div class="details-button">
-          <h4 v-if="url != ''" @click="redirect(url)">VIEW SITE</h4>
+          <h4 v-if="url != ''" @click="redirect(url)">WEBSITE</h4>
           <h4 v-if="github_front != ''" @click="redirect(github_front)">
-            GITHUB FRONT-END
+            FRONT-END CODE
           </h4>
           <h4 v-if="github_back != ''" @click="redirect(github_back)">
-            GITHUB BACK-END
+            BACK-END CODE
           </h4>
         </div>
         <div @click="open" class="close icon">
@@ -123,7 +123,7 @@ export default {
 <style lang="scss" scoped>
 .work-card {
   width: 100%;
-  height: 40vh;
+  min-height: 40vh;
   row-gap: 1vh;
   display: grid;
   justify-items: center;
@@ -399,6 +399,8 @@ img {
     justify-items: center;
     align-items: start;
     grid-template-columns: 0.8fr 1.2fr 1fr;
+    position: fixed;
+    bottom: 1em;
 
     h4 {
       width: 90%;
@@ -447,6 +449,14 @@ img {
 @media only screen and (min-width: 600px) {
   .work-card {
     height: 50vh;
+  }
+
+  .mobile-tablet {
+    height: 50vh;
+
+    img {
+      height: 50vh;
+    }
   }
 
   .button {
@@ -501,14 +511,15 @@ img {
   }
 
   .slider {
-    height: 65vh;
-  }
+    width: 100%;
+    min-height: 65vh;
 
-  img {
-    height: 65vh;
-    object-fit: cover;
+    img {
+      width: 100%;
+      min-height: 65vh;
+      object-fit: cover;
+    }
   }
-
   .content {
     min-height: 35vh;
     padding: 1.5em 0 1em 0;

@@ -39,10 +39,10 @@ export default new Vuex.Store({
         id: 1,
         cover_image: require("@/assets/Tweeter_cover.png"),
         name: "Full-Stack Tweeter Project",
-        purpose: "A Mobile Social Media Application Design",
-        language: "Flask Python, Restful API, Vue.js, Vuex",
+        purpose: "A CRUD Responsive Social Media Website Design",
+        language: "Flask Python, Restful API, MariaDB, Vue.js, Vuex",
         description:
-          "Built a CRUD responsive social media website whose server-side is created by Flask Python and RESTful API in collaboration with SQL and database and client-side is created by Vue.js and Vuex; there are more than 20 features include social authorization, feed, post and comments creation, edit and delete; post and comments likes, user profile and search; focused on mobile responsive and a proper web application.",
+          "Built a CRUD responsive social media website whose server-side is created by Flask Python and RESTful API working with SQL and database and client-side is created by Vue.js and Vuex; there are more than 20 features including social authorization, feed and comments CRUD; tweet and comments like, user profile and search; focused on mobile experience.",
         website: "https://daisyfulltweeter.ml",
         github_front: "https://github.com/daisy0905/Tweeter-frontend.git",
         github_back: "https://github.com/daisy0905/Tweeter-backend.git",
@@ -62,16 +62,50 @@ export default new Vuex.Store({
         ],
       },
       {
-        id: 1,
+        id: 2,
         cover_image: require("@/assets/ArtistWebsite_cover.png"),
         name: "Artist Website Project",
-        purpose: "A Fully Responsive Website Design",
-        language: "Flask Python, Restful API, Vue.js, Vuex",
+        purpose: "A CRUD Responsive Website Design",
+        language: "Flask Python, Restful API, MariaDB Vue.js, Vuex",
         description:
-          "It is an advanced full-stack web development project in the use of database, Flaks Python, RESTful API and Vue.js and Vuex; created features for visitors and the artist including visitors’ reviewing artwork, submitting enquiry and ordering the artwork, and subscribing to the newsletter; the artist’s reviewing artwork inventory, uploading, updating and deleting artwork, checking artworks’ status, visitors' enquiries and contact information for follow-up; the website is fully responsive.",
+          "It is a dynamic database-driven website in the use of MariaDB, database, Flaks Python, RESTful API and Vue.js and Vuex; acted as an online store for E-Commerce activities; the website is fully responsive.",
         website: "https://artisttongkemin.ml",
         github_front: "https://github.com/daisy0905/Artistwebsite-frontend.git",
         github_back: "https://github.com/daisy0905/Artistwebsite-backend.git",
+        images: [
+          {
+            id: 0,
+            image: require("@/assets/ArtistWebsite_1.png"),
+          },
+          {
+            id: 1,
+            image: require("@/assets/ArtistWebsite_2.png"),
+          },
+          {
+            id: 2,
+            image: require("@/assets/ArtistWebsite_3.png"),
+          },
+          {
+            id: 3,
+            image: require("@/assets/ArtistWebsite_4.png"),
+          },
+          {
+            id: 4,
+            image: require("@/assets/ArtistWebsite_5.png"),
+          },
+        ],
+      },
+      {
+        id: 3,
+        cover_image: require("@/assets/Pokeman_cover.png"),
+        name: "Pokeman Battle Simulator",
+        purpose: "A Pokemon battle simulator with JS concepts and cookies",
+        language: "HTML, CSS, Bootstrap, JavaScript",
+        description:
+          "Created a pokeman battle simulator which injected the classic pokeman battle game with a new combat system and new attributes of pocket monsters.",
+        website: "https://daisypokeman.ml/",
+        github_front: "https://github.com/daisy0905/PokemanBattleGame.git",
+        github_back: "",
         images: [
           {
             id: 0,
@@ -192,31 +226,31 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   getters: {
-    getVue: function(state) {
+    getVue: function (state) {
       let vueWorks = [];
-      for(let i=0; i<state.works.length; i++) {
-        if(state.works[i].language == "Flask Python, Restful API, Vue.js, Vuex") {
+      for (let i = 0; i < state.works.length; i++) {
+        if (state.works[i].language == "Flask Python, Restful API, Vue.js, Vuex") {
           vueWorks.push(state.works[i]);
         }
       }
       return vueWorks;
     },
-    getHtml: function(state) {
+    getHtml: function (state) {
       let htmlWorks = []
-      for(let i=0; i<state.works.length; i++) {
-        if(state.works[i].language == "HTML, CSS, SASS") {
+      for (let i = 0; i < state.works.length; i++) {
+        if (state.works[i].language == "HTML, CSS, SASS") {
           htmlWorks.push(state.works[i]);
         }
       }
       return htmlWorks;
     },
-    getOtherTwo: function(state) {
+    getOtherTwo: function (state) {
       let getOtherTwo = []
       getOtherTwo.push(state.otherworks[0])
       getOtherTwo.push(state.otherworks[1])
       return getOtherTwo
     },
-    getOtherThird: function(state) {
+    getOtherThird: function (state) {
       let getOtherThird = []
       getOtherThird.push(state.otherworks[2])
       return getOtherThird

@@ -18,23 +18,23 @@
         better demonstrate my strong visual design capability.
       </p>
       <div id="category">
-        <h3 id="web" @click="getWeb">WEB DEVELOPMENT</h3>
-        <h3 id="other" @click="getOther">OTHER DESIGN WORKS</h3>
+        <h3 id="web" @click="getWeb">WEB WORKS</h3>
+        <h3 id="other" @click="getOther">OTHER DESIGNS</h3>
       </div>
     </div>
     <div class="work-show" v-if="display">
       <work-card-list class="mobile-tablet"></work-card-list>
-      <div class="desktop">
+      <!-- <div class="desktop">
         <vue-work-list class="work-list-1"></vue-work-list>
         <html-work-list class="work-list-2"></html-work-list>
-      </div>
+      </div> -->
     </div>
     <div class="work-show" v-if="display == false">
       <other-work-card-list class="mobile-tablet"></other-work-card-list>
-      <div class="desktop">
+      <!-- <div class="desktop">
         <other-two-list class="work-list-1"></other-two-list>
         <other-third class="work-list-2"></other-third>
-      </div>
+      </div> -->
     </div>
     <footer-bar></footer-bar>
   </div>
@@ -46,10 +46,10 @@ import OtherWorkCardList from "../components/OtherWorkCardList.vue";
 import WorkCardList from "../components/WorkCardList.vue";
 import FooterBar from "../components/Footer.vue";
 import NavDesktop from "../components/NavDesktop.vue";
-import VueWorkList from "../components/VueWorkList.vue";
-import HtmlWorkList from "../components/HtmlWorkList.vue";
-import OtherTwoList from "../components/OtherTwo.vue";
-import OtherThird from "../components/OtherThird.vue";
+// import VueWorkList from "../components/VueWorkList.vue";
+// import HtmlWorkList from "../components/HtmlWorkList.vue";
+// import OtherTwoList from "../components/OtherTwo.vue";
+// import OtherThird from "../components/OtherThird.vue";
 export default {
   components: {
     WorkCardList,
@@ -57,10 +57,10 @@ export default {
     OtherWorkCardList,
     FooterBar,
     NavDesktop,
-    HtmlWorkList,
-    VueWorkList,
-    OtherTwoList,
-    OtherThird,
+    // HtmlWorkList,
+    // VueWorkList,
+    // OtherTwoList,
+    // OtherThird,
   },
   data() {
     return {
@@ -161,9 +161,9 @@ export default {
   align-items: start;
 }
 
-.desktop {
-  display: none;
-}
+// .desktop {
+//   display: none;
+// }
 
 @media only screen and (min-width: 600px) {
   #title {
@@ -190,9 +190,9 @@ export default {
     min-height: 100vh;
   }
 
-  .desktop {
-    display: none;
-  }
+  // .desktop {
+  //   display: none;
+  // }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -244,30 +244,30 @@ export default {
     align-items: start;
     margin-top: 4em;
 
-    .mobile-tablet {
-      display: none;
-    }
+    // .mobile-tablet {
+    //   display: none;
+    // }
 
-    .desktop {
-      width: 100%;
-      min-height: 60vh;
-      display: grid;
-      justify-items: center;
-      align-items: center;
+    // .desktop {
+    //   width: 100%;
+    //   min-height: 60vh;
+    //   display: grid;
+    //   justify-items: center;
+    //   align-items: center;
 
-      .work-list-1 {
-        width: 100%;
-        min-height: 60vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
+    //   .work-list-1 {
+    //     width: 100%;
+    //     min-height: 60vh;
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    //   }
 
-      .work-list-2 {
-        width: 50%;
-        min-height: 60vh;
-        display: grid;
-      }
-    }
+    //   .work-list-2 {
+    //     width: 50%;
+    //     min-height: 60vh;
+    //     display: grid;
+    //   }
+    // }
   }
 }
 </style>

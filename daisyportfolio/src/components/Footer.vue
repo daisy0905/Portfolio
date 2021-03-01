@@ -84,7 +84,6 @@ export default {
 
     a {
       font-size: 0.8rem;
-      margin: 0.5em;
       text-decoration: none;
       color: black;
     }
