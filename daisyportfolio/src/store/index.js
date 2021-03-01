@@ -99,33 +99,33 @@ export default new Vuex.Store({
         id: 3,
         cover_image: require("@/assets/Pokeman_cover.png"),
         name: "Pokeman Battle Simulator",
-        purpose: "A Pokemon battle simulator with JS concepts and cookies",
+        purpose: "A Pokemon battle simulator in the use of JS concepts, CSS framework and cookies",
         language: "HTML, CSS, Bootstrap, JavaScript",
         description:
-          "Created a pokeman battle simulator which injected the classic pokeman battle game with a new combat system and new attributes of pocket monsters.",
+          "Created a pokeman battle simulator which injected the classic pokeman battle game with a new combat system and new attributes of pocket monsters; fully responsive experience.",
         website: "https://daisypokeman.ml/",
         github_front: "https://github.com/daisy0905/PokemanBattleGame.git",
         github_back: "",
         images: [
           {
             id: 0,
-            image: require("@/assets/ArtistWebsite_1.png"),
+            image: require("@/assets/pokeman_landing.png"),
           },
           {
             id: 1,
-            image: require("@/assets/ArtistWebsite_2.png"),
+            image: require("@/assets/pokeman_home.png"),
           },
           {
             id: 2,
-            image: require("@/assets/ArtistWebsite_3.png"),
+            image: require("@/assets/pokeman_rule.png"),
           },
           {
             id: 3,
-            image: require("@/assets/ArtistWebsite_4.png"),
+            image: require("@/assets/pokeman_play.png"),
           },
           {
             id: 4,
-            image: require("@/assets/ArtistWebsite_5.png"),
+            image: require("@/assets/pokeman_battle.png"),
           },
         ],
       },
@@ -164,6 +164,34 @@ export default new Vuex.Store({
       },
       {
         id: 1,
+        cover_image: require("@/assets/Branding_cover.png"),
+        name: "Branding Design",
+        purpose:
+          "Graphic Design for Hospital's Branding Package",
+        language:
+          "Photoshop, Illustrator, Indesign",
+        description:
+          "Created the branding package including logo, product packaging, business cards and signs; cultivated a good, trustworthy, distinctive, and reliable brand which enabled patiensts to have more positive experience.",
+        website: "",
+        github_front: "",
+        github_back: "",
+        images: [
+          {
+            id: 0,
+            image: require("@/assets/Other_1.png"),
+          },
+          {
+            id: 1,
+            image: require("@/assets/Other_2.png"),
+          },
+          {
+            id: 2,
+            image: require("@/assets/Other_3.png"),
+          }
+        ],
+      },
+      {
+        id: 2,
         cover_image: require("@/assets/Diagram_cover.png"),
         name: "Diagram Design",
         purpose:
@@ -190,7 +218,7 @@ export default new Vuex.Store({
         ],
       },
       {
-        id: 1,
+        id: 3,
         cover_image: require("@/assets/Other_cover.png"),
         name: "Other Design Works",
         purpose:

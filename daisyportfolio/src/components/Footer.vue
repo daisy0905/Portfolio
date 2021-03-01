@@ -23,7 +23,7 @@
       </div>
     </div>
     <div id="copyright">
-      <h4>DAISY TONG<span id="text">@2020</span></h4>
+      <h4>DAISY TONG<span id="text">@2021</span></h4>
     </div>
   </div>
 </template>
@@ -102,6 +102,7 @@ export default {
     font-weight: normal;
     font-size: 0.8rem;
     color: lightgrey;
+    letter-spacing: 0.2em;
   }
 
   #text {
@@ -115,8 +116,10 @@ export default {
   #contact {
     min-height: 20vh;
     grid-template-columns: 1fr 1fr;
+    padding: 2em 0 1.5em 0;
 
     .item {
+      
       img {
         width: 30px;
         height: 30px;
@@ -174,10 +177,43 @@ export default {
   #copyright {
     h4 {
       font-size: 1rem;
+      letter-spacing: 0.5em;
     }
 
     #text {
       font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+
+  #contact {
+
+    .item {
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #copyright {
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    #text {
+      font-size: 1.2rem;
     }
   }
 }

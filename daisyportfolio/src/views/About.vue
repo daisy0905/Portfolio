@@ -46,7 +46,7 @@
           <button
             @click="
               redirect(
-                'https://www.dropbox.com/s/jkk1xgitxhs518k/Resume_Daisy%20Tong.pdf?dl=0'
+                'https://www.dropbox.com/s/bwdl49ask9c68e7/Resume_Daisy%20Tong.pdf?dl=0'
               )
             "
           >
@@ -150,7 +150,7 @@ h1 {
 
   .concept-unit {
     width: 80%;
-    height: 18vh;
+    min-height: 20vh;
     display: grid;
     justify-items: center;
     align-items: start;
@@ -394,7 +394,7 @@ h1 {
       width: 80%;
 
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -430,17 +430,17 @@ h1 {
 
       h3 {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding-top: 2em;
-        line-height: 1.2em;
+        line-height: 1.3em;
         border-top: none;
       }
 
       p {
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding-bottom: 2em;
-        line-height: 1.2em;
+        line-height: 1.3em;
       }
 
       #text {
@@ -460,6 +460,52 @@ h1 {
 
     #skillsets {
       width: 80%;
+    }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+
+  #concept-container {
+    margin-top: 1.8em;
+
+    .concept-unit {
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #profile {
+    width: 60%;
+    column-gap: 2em;
+
+    #details {
+
+      h3 {
+        font-size: 1.8rem;
+        line-height: 1.5em;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.5em;
+      }
+
+      #text {
+        border-bottom: none;
+      }
+    }
+  }
+
+  #skills {
+    margin-top: 3em;
+    width: 100%;
+
+    h2 {
+      width: 40%;
+      margin-bottom: 2em;
     }
   }
 }

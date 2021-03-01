@@ -136,7 +136,7 @@ export default {
 
 .mobile-tablet {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -547,18 +547,18 @@ img {
 
 @media only screen and (min-width: 1024px) {
   .work-card {
-    height: 40vh;
+    height: 60vh;
 
     .desktop {
       width: 100%;
-      height: 100%;
+      height: 60vh;
       display: grid;
       justify-items: center;
       align-items: center;
 
       .image {
         width: 100%;
-        height: 100%;
+        height: 60vh;
         display: grid;
         justify-items: center;
         align-items: center;
@@ -571,7 +571,7 @@ img {
 
         img {
           width: 100%;
-          height: 100%;
+          height: 60vh;
           object-fit: cover;
           padding-top: 0;
           border: 3px solid white;
@@ -673,15 +673,103 @@ img {
     p {
       width: 90%;
       height: 30vh;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      padding-bottom: 0.5em;
+    }
+
+    .details-button {
+      width: 40%;
+      height: 5vh;
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      grid-template-columns: 0.9fr 1.2fr 1fr;
+      position: fixed;
+      bottom: 1em;
+
+      h4 {
+        width: 70%;
+        font-size: 0.7rem;
+        padding-bottom: 0.2em;
+      }
+    }
+
+    .icon {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .description {
+    padding: 4em 0 4em 0;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .purpose {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      width: 15vw;
+      font-size: 1.2rem;
+    }
+  }
+
+  .details {
+    width: 40%;
+    min-height: 70vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    align-content: start;
+    position: fixed;
+    top: 0;
+    right: 30vw;
+    z-index: 500;
+    background-color: white;
+    box-shadow: 5px 5px 5px darkgrey;
+  }
+
+  .slider {
+    width: 100%;
+    height: 55vh;
+  }
+
+  img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+  }
+
+  .content {
+    height: 45vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    padding: 1em 0 1em 0;
+    background-color: lightgrey;
+
+    p {
+      width: 90%;
+      height: 30vh;
+      font-size: 1.2rem;
       padding-bottom: 0.5em;
     }
 
     .details-button {
       h4 {
-        width: 90%;
-        font-size: 0.7rem;
-        padding-bottom: 0.2em;
+        font-size: 1rem;
+        padding-bottom: 0.4em;
       }
     }
 

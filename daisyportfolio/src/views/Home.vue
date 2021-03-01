@@ -21,7 +21,7 @@
       <main class="body">
         <div class="container-1">
           <h2>HELLO, MY NAME IS</h2>
-          <h1 class="title">DAISTY TONG</h1>
+          <h1 class="title">DAISY TONG</h1>
           <p>I’m a Full-Stack Web Developer</p>
           <div class="btn-container">
             <a class="btn" @click="goToProjects"
@@ -38,7 +38,7 @@
       </main>
     </div>
     <div id="copyright">
-      <h4>DAISY TONG<span id="text">@2020</span></h4>
+      <h4>DAISY TONG<span id="text">@2021</span></h4>
     </div>
   </div>
 </template>
@@ -569,17 +569,18 @@ export default {
   }
 
   .btn {
-    width: 300px;
+    width: 400px;
     height: 85px;
     font-size: 1.5rem;
 
     span {
       top: 35px;
+      letter-spacing: 0.3em;
     }
 
     &:before,
     &:after {
-      width: 300px;
+      width: 400px;
       height: 60px;
     }
 
@@ -593,6 +594,68 @@ export default {
       &:active {
         cursor: pointer;
       }
+    }
+  }
+
+  .enter-img {
+    width: 60px;
+    height: 60px;
+    right: 5vw;
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+  }
+
+  #copyright {
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    #text {
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+    }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+
+  .container-1 {
+    height: 60vh;
+    display: grid;
+    width: 100%;
+    padding-top: 10em;
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: 0.4em;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .btn {
+    width: 500px;
+    height: 85px;
+    font-size: 1.5rem;
+
+    span {
+      top: 35px;
+      letter-spacing: 0.5em;
+    }
+
+    &:before,
+    &:after {
+      width: 500px;
+      height: 60px;
     }
   }
 

@@ -31,7 +31,7 @@
           <button
             @click="
               redirect(
-                'https://www.dropbox.com/s/jkk1xgitxhs518k/Resume_Daisy%20Tong.pdf?dl=0'
+                'https://www.dropbox.com/s/bwdl49ask9c68e7/Resume_Daisy%20Tong.pdf?dl=0'
               )
             "
           >
@@ -291,7 +291,7 @@ export default {
     }
 
     #container {
-      width: 70%;
+      width: 50%;
       min-height: 70vh;
       grid-template-columns: 1.5fr 1fr;
       padding-top: 1em;
@@ -300,6 +300,7 @@ export default {
     #contact {
       width: 100%;
       height: 45vh;
+      padding-top: 3em;
 
       .item {
         justify-items: left;
@@ -323,12 +324,76 @@ export default {
 
     #button {
       width: 100%;
-      padding: 3em;
+      padding: 0 3em 3em 3em;
     }
 
     button {
       width: 100%;
       font-size: 1rem;
+      margin-bottom: 2em;
+      padding: 0.5em;
+      line-height: 1.5em;
+    }
+  }
+
+  #footer {
+    h4 {
+      font-size: 1rem;
+    }
+
+    #text {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+
+  #contact-container {
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    #container {
+      width: 50%;
+    }
+
+    #contact {
+      width: 100%;
+      height: 45vh;
+      padding: 4em 0 2em 0;
+
+      .item {
+        justify-items: left;
+        grid-template-columns: 20% 80%;
+        margin-left: 15em;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        h4 {
+          text-align: left;
+          font-size: 1.5rem;
+        }
+
+        a {
+          text-align: left;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    #button {
+      width: 100%;
+      padding: 0 3em 4em 3em;
+    }
+
+    button {
+      width: 100%;
+      font-size: 1.5rem;
       margin-bottom: 2em;
       padding: 0.5em;
       line-height: 1.5em;

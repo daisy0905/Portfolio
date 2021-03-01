@@ -43,11 +43,14 @@ export default {
 @media only screen and (min-width: 1024px) {
   .works {
     width: 100%;
-    min-height: 30vh;
+    min-height: 60vh;
     display: grid;
     justify-items: center;
-    align-items: center;
+    align-items: start;
     row-gap: 0vh;
   }
+}
+
+@media only screen and (min-width: 2400px) {
 }
 </style>

@@ -127,16 +127,16 @@ export default {
 
   #category {
     width: 90%;
-    height: 5vh;
+    min-height: 5vh;
     display: grid;
     grid-template-columns: 0.8fr 1.1fr;
     justify-items: center;
-    align-items: center;
+    align-items: start;
 
     h3 {
       width: 100%;
       padding: 0;
-      margin-top: 1.5em;
+      margin: 1.5em 0 0.5em 0;
       font-weight: bold;
       font-size: 0.8rem;
       color: #6f1d1bff;
@@ -167,6 +167,7 @@ export default {
 
 @media only screen and (min-width: 600px) {
   #title {
+    min-height: 50vh;
     h1 {
       width: 25%;
       margin: 1em 0 1em 0;
@@ -182,6 +183,7 @@ export default {
     #category {
       h3 {
         font-size: 1.5rem;
+        margin: 1.5em 0 1em 0;
       }
     }
   }
@@ -233,6 +235,7 @@ export default {
       h3 {
         width: 70%;
         font-size: 1.5rem;
+        margin: 0 0 0 0;
       }
     }
   }
@@ -242,11 +245,16 @@ export default {
     min-height: 100vh;
     justify-items: center;
     align-items: start;
-    margin-top: 4em;
+    margin-top: 2em;
 
-    // .mobile-tablet {
-    //   display: none;
-    // }
+    .mobile-tablet {
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      grid-template-columns: 1fr 1fr;
+    }
 
     // .desktop {
     //   width: 100%;
@@ -268,6 +276,35 @@ export default {
     //     display: grid;
     //   }
     // }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+
+  #title {
+    width: 90%;
+    min-height: 40vh;
+
+    h1 {
+      width: 15%;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    #category {
+      height: 3vh;
+      margin: 2.5em 0 2em 0;
+
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .work-show {
+    min-height: 80vh;
   }
 }
 </style>

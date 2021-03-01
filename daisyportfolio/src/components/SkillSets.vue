@@ -119,13 +119,28 @@ export default {
         },
         {
           id: 13,
-          name: "SQL",
-          icon: require("@/assets/sql_icon.png"),
+          name: "Figma",
+          icon: require("@/assets/figma_icon.png"),
         },
         {
           id: 14,
           name: "MariaDB",
           icon: require("@/assets/db_icon.png"),
+        },
+        {
+          id: 15,
+          name: "MySQL",
+          icon: require("@/assets/mySQL_icon.png"),
+        },
+        {
+          id: 16,
+          name: "bootstrap",
+          icon: require("@/assets/db_icon.png"),
+        },
+        {
+          id: 17,
+          name: "wordpress",
+          icon: require("@/assets/wordpress_icon.png"),
         },
       ],
       graphicskills: [
@@ -315,6 +330,18 @@ export default {
         margin-bottom: 1em;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+
+  .skill-container {
+    .skill-unit-1 {
+      .skill-component {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
   }
 }
 </style>
