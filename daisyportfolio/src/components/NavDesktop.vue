@@ -99,7 +99,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 2400px) {
   #header {
 
     h2 {

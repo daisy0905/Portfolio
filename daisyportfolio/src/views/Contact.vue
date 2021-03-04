@@ -291,7 +291,7 @@ export default {
     }
 
     #container {
-      width: 50%;
+      width: 65%;
       min-height: 70vh;
       grid-template-columns: 1.5fr 1fr;
       padding-top: 1em;
@@ -300,7 +300,7 @@ export default {
     #contact {
       width: 100%;
       height: 45vh;
-      padding-top: 3em;
+      padding-top: 2em;
 
       .item {
         justify-items: left;
@@ -314,10 +314,12 @@ export default {
 
         h4 {
           text-align: left;
+          font-size: 1rem;
         }
 
         a {
           text-align: left;
+          font-size: 1rem;
         }
       }
     }

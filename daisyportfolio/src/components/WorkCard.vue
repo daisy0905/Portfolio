@@ -673,7 +673,7 @@ img {
     p {
       width: 90%;
       height: 30vh;
-      font-size: 1rem;
+      font-size: 0.8rem;
       padding-bottom: 0.5em;
     }
 
