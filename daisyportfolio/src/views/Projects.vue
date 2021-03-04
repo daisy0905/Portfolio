@@ -134,9 +134,9 @@ export default {
     align-items: start;
 
     h3 {
-      width: 60%;
+      width: 80%;
       padding: 0;
-      margin: 1.5em 0 0.5em 0;
+      margin: 1.5em 0 0.8em 0;
       font-weight: bold;
       font-size: 0.8rem;
       color: #6f1d1bff;

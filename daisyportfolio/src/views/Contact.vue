@@ -45,7 +45,7 @@
         </div>
       </div>
       <div id="footer">
-        <h4>DAISY TONG<span id="text">@2020</span></h4>
+        <h4>DAISY TONG<span id="text">@2021</span></h4>
       </div>
     </div>
   </div>
@@ -339,6 +339,7 @@ export default {
   #footer {
     h4 {
       font-size: 1rem;
+      letter-spacing: 0.5em;
     }
 
     #text {
@@ -402,11 +403,11 @@ export default {
 
   #footer {
     h4 {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     #text {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 }
